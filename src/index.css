@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply min-h-screen bg-canvas font-body text-slate-100 antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(245, 181, 68, 0.06), transparent 22%),
+      linear-gradient(to bottom, #06070a 0%, #05070c 48%, #070a11 100%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 15% 12%, rgba(245, 181, 68, 0.08), transparent 22%),
+      radial-gradient(circle at 85% 24%, rgba(34, 211, 238, 0.06), transparent 20%);
+    z-index: -2;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  ::selection {
+    background: rgba(245, 181, 68, 0.3);
+    color: #ffffff;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-[28px] border border-white/10 bg-white/[0.035] shadow-panel backdrop-blur-xl;
+  }
+
+  .panel-strong {
+    @apply rounded-[32px] border border-white/10 bg-slate-950/75 shadow-glow backdrop-blur-xl;
+  }
+
+  .section-shell {
+    @apply scroll-mt-28 py-20 sm:py-24;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-amber-200/85;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-amber-300 px-5 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-slate-100 transition duration-300 hover:border-white/20 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/35;
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-medium text-slate-300;
+  }
+
+  .fine-line {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(12px, 18px, 0) scale(1.06);
+  }
+}
+
+.ambient-orb {
+  animation: drift 16s ease-in-out infinite alternate;
+}
+
+.ambient-orb-slow {
+  animation-duration: 22s;
+}

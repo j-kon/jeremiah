@@ -10,7 +10,7 @@ function CommunitySection() {
   return (
     <section id="community" className="section-shell" aria-labelledby="community-heading">
       <Container>
-        <div className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-8">
+        <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1.02fr_0.98fr] xl:gap-8">
           <Reveal>
             <SectionHeading
               titleId="community-heading"
@@ -19,7 +19,7 @@ function CommunitySection() {
               description="Community leadership and writing matter to me because they create leverage. They help ideas travel, help people feel included, and make technical work more durable over time."
             />
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
               {communityStats.map((stat, index) => (
                 <Reveal key={stat.label} delay={index * 0.05} className="panel p-5">
                   <p className="font-display text-3xl font-semibold text-white">{stat.value}</p>

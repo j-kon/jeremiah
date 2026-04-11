@@ -1,43 +1,72 @@
-import { Compass } from 'lucide-react';
+import { ArrowRight, Compass } from 'lucide-react';
 import Container from '../components/Container';
 import Reveal from '../components/Reveal';
 import SectionHeading from '../components/SectionHeading';
-import { visionPoints } from '../data/portfolio';
+import { nowNext, visionPoints } from '../data/portfolio';
 
 function VisionSection() {
   return (
     <section id="vision" className="section-shell" aria-labelledby="vision-heading">
       <Container>
-        <Reveal>
-          <SectionHeading
-            titleId="vision-heading"
-            eyebrow="What I&apos;m Building Toward"
-            title="An engineering path shaped by Bitcoin, mobile systems, and freedom technology."
-            description="The direction is aspirational, but grounded. I want to keep doing strong product work while moving closer to the infrastructure, tooling, and open source efforts that matter for the next decade."
-            align="center"
-          />
-        </Reveal>
+        <div className="grid grid-cols-1 gap-8 xl:grid-cols-[0.84fr_1.16fr] xl:gap-10">
+          <Reveal>
+            <SectionHeading
+              titleId="vision-heading"
+              eyebrow="Now / Next"
+              title="A direction that is grounded in current work, not only future ambition."
+              description="I want the portfolio to show where I am now, what I am deliberately growing toward, and what kind of technical problems I want to spend more time on."
+            />
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {visionPoints.map((point, index) => (
-            <Reveal key={point.title} delay={index * 0.05}>
-              <article className="panel h-full p-6 transition duration-300 hover:-translate-y-1 hover:border-white/15">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.04]">
-                  <Compass className="h-5 w-5 text-amber-300" />
-                </span>
-                <h3 className="mt-5 font-display text-xl font-semibold text-white">{point.title}</h3>
-                <p className="mt-4 text-base leading-8 text-slate-300">{point.description}</p>
-              </article>
-            </Reveal>
-          ))}
+            <div className="panel mt-8 p-5 sm:p-7">
+              <p className="font-display text-xl font-semibold leading-tight text-white sm:text-2xl">
+                The through-line is simple: keep shipping strong product work while moving closer to the rails that make
+                Bitcoin, mobile trust, and developer leverage more real.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.08} className="panel-strong p-5 sm:p-8">
+            <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
+              <div>
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Now</p>
+                <div className="mt-5 space-y-4">
+                  {nowNext.now.map((item) => (
+                    <div key={item} className="flex gap-3">
+                      <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-amber-300" />
+                      <p className="text-sm leading-7 text-slate-300">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Next</p>
+                <div className="mt-5 space-y-4">
+                  {nowNext.next.map((item) => (
+                    <div key={item} className="flex gap-3">
+                      <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-cyan-300" />
+                      <p className="text-sm leading-7 text-slate-300">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="fine-line my-8" />
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {visionPoints.map((point) => (
+                <div key={point.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-5">
+                  <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/10 bg-white/[0.04]">
+                    <Compass className="h-4 w-4 text-amber-300" />
+                  </span>
+                  <h3 className="mt-4 font-display text-xl font-semibold text-white">{point.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">{point.description}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
-
-        <Reveal delay={0.18} className="panel mt-6 p-7 text-center sm:p-8">
-          <p className="mx-auto max-w-4xl text-lg leading-8 text-slate-300">
-            I&apos;m especially interested in work that makes Bitcoin more usable, mobile products more trustworthy,
-            and developer systems more thoughtful for builders operating in emerging markets.
-          </p>
-        </Reveal>
       </Container>
     </section>
   );

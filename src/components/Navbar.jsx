@@ -32,12 +32,12 @@ function Navbar({ items, activeSection }) {
       <Container className="pt-4">
         <div className="rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 shadow-panel backdrop-blur-xl sm:px-5">
           <div className="flex items-center justify-between gap-4 xl:gap-5">
-            <a href="#home" className="flex shrink-0 items-center gap-3">
+            <a href="#home" className="flex min-w-0 shrink items-center gap-3">
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.04] font-mono text-xs font-semibold uppercase tracking-[0.22em] text-amber-200">
                 JJ
               </span>
-              <div className="leading-none">
-                <p className="whitespace-nowrap font-display text-sm font-semibold text-white">Jeremiah Jacob</p>
+              <div className="min-w-0 leading-none">
+                <p className="truncate font-display text-xs font-semibold text-white sm:text-sm">Jeremiah Jacob</p>
                 <p className="mt-1 hidden whitespace-nowrap text-[11px] uppercase tracking-[0.2em] text-slate-500 min-[1700px]:block">
                   Jaykon
                 </p>

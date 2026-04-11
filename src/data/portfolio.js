@@ -36,6 +36,21 @@ export const socialLinks = [
 
 export const heroBadges = ['Bitcoin', 'Flutter', 'Open Source', 'Community'];
 
+export const featuredStack = [
+  'Flutter',
+  'Dart',
+  'Firebase',
+  'Riverpod',
+  'GetX',
+  'GraphQL',
+  'SQLite',
+  'Git',
+  'Bitcoin',
+  'Lightning',
+  'BDK',
+  'CI/CD',
+];
+
 export const heroMetrics = [
   {
     value: '5+',
@@ -66,6 +81,19 @@ export const heroTerminal = [
   },
 ];
 
+export const heroTracks = [
+  {
+    label: 'Current Lane',
+    description:
+      'Shipping polished Flutter products with strong architecture, API integration, auth flows, Firebase-backed systems, and mobile UX discipline.',
+  },
+  {
+    label: 'Build Direction',
+    description:
+      'Moving deeper into Bitcoin wallet infrastructure, Lightning-powered product flows, developer tooling, and freedom tech for emerging markets.',
+  },
+];
+
 export const signalCards = [
   {
     eyebrow: 'Current Positioning',
@@ -93,6 +121,27 @@ export const signalCards = [
   },
 ];
 
+export const projectSignals = [
+  {
+    label: 'Selection Lens',
+    value: 'Depth over volume',
+    description:
+      'The goal is not to collect generic side projects. It is to build a body of work that compounds toward mobile wallet infrastructure, Lightning UX, and better developer systems.',
+  },
+  {
+    label: 'What To Notice',
+    value: 'Systems thinking',
+    description:
+      'Each project is framed around product leverage, technical constraints, and why the work matters beyond a surface-level feature list.',
+  },
+  {
+    label: 'Trajectory',
+    value: 'Apps to rails',
+    description:
+      'The through-line is clear: strong app execution today, deeper Bitcoin-native infrastructure and tooling tomorrow.',
+  },
+];
+
 export const aboutParagraphs = [
   'I started by shipping mobile products with Flutter, building the kind of features that need to be dependable in the real world: authentication, API integrations, Firebase-backed systems, local persistence, and app architecture that can grow with product demands.',
   'Over time, my curiosity moved deeper into Bitcoin, wallet infrastructure, Lightning-enabled experiences, and the systems thinking behind product engineering. I care about technology that increases user freedom, improves access, and holds up under practical constraints.',
@@ -110,6 +159,24 @@ export const principles = [
   'Product thinking grounded in real user constraints',
   'Freedom technology with practical use cases',
   'Community as a force multiplier for adoption',
+];
+
+export const workingWithMe = [
+  {
+    title: 'I like high-agency work',
+    description:
+      'I do well in environments where engineers are trusted to reason about product, not only tickets.',
+  },
+  {
+    title: 'I think in systems, not just screens',
+    description:
+      'I care about the rails underneath the interface: state, trust, reliability, tradeoffs, and long-term maintainability.',
+  },
+  {
+    title: 'I communicate as I build',
+    description:
+      'Writing, community work, and collaboration are part of how I operate, not separate from engineering.',
+  },
 ];
 
 export const skillGroups = [
@@ -371,6 +438,19 @@ export const visionPoints = [
       'Focus on products and infrastructure that make sense in markets where access, resilience, and self-sovereignty matter most.',
   },
 ];
+
+export const nowNext = {
+  now: [
+    'Shipping cross-platform mobile product work with an emphasis on architecture, integration quality, and long-term clarity.',
+    'Studying wallet mechanics, self-custody flows, and Bitcoin-native product decisions with more technical depth.',
+    'Writing and speaking about Bitcoin, technology, and the kind of developer culture that helps people keep building.',
+  ],
+  next: [
+    'Deeper contribution to Bitcoin open source and wallet infrastructure.',
+    'More hands-on work with Lightning-enabled consumer and merchant products.',
+    'Developer tools that improve planning, architecture review, and implementation clarity.',
+  ],
+};
 
 export const contactMethods = [
   {

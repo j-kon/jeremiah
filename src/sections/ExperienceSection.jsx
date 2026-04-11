@@ -7,7 +7,7 @@ function ExperienceSection() {
   return (
     <section id="experience" className="section-shell" aria-labelledby="experience-heading">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
+        <div className="grid grid-cols-1 gap-8 xl:grid-cols-[0.85fr_1.15fr] xl:gap-10">
           <Reveal>
             <SectionHeading
               titleId="experience-heading"

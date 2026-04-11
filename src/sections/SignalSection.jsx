@@ -7,7 +7,7 @@ function SignalSection() {
     <section aria-label="Proof highlights" className="pb-12 pt-2 sm:pb-14">
       <Container>
         <div className="panel-strong overflow-hidden">
-          <div className="grid gap-px bg-white/10 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-px bg-white/10 sm:grid-cols-2 xl:grid-cols-4">
             {signalCards.map((card, index) => (
               <Reveal key={card.eyebrow} delay={index * 0.05}>
                 <article className="h-full bg-slate-950/80 p-6 sm:p-7">

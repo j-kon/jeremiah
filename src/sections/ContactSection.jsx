@@ -17,7 +17,7 @@ function ContactSection() {
       <Container>
         <Reveal>
           <div className="panel-strong overflow-hidden">
-            <div className="grid gap-8 p-7 sm:p-8 lg:grid-cols-[1.04fr_0.96fr] lg:p-10">
+            <div className="grid grid-cols-1 gap-8 p-5 sm:p-8 xl:grid-cols-[1.04fr_0.96fr] xl:p-10">
               <div>
                 <span className="eyebrow">Contact</span>
                 <h2 id="contact-heading" className="mt-5 max-w-2xl font-display text-3xl font-semibold text-white sm:text-4xl">
@@ -25,12 +25,12 @@ function ContactSection() {
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">{contactIntro}</p>
 
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <a href="mailto:hello@jaykon.dev" className="btn-primary">
+                <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+                  <a href="mailto:hello@jaykon.dev" className="btn-primary w-full sm:w-auto">
                     Email Me
                     <ArrowRight className="h-4 w-4" />
                   </a>
-                  <a href="#projects" className="btn-secondary">
+                  <a href="#projects" className="btn-secondary w-full sm:w-auto">
                     View Projects
                   </a>
                 </div>
@@ -41,7 +41,7 @@ function ContactSection() {
                   const Icon = iconMap[method.icon];
                   const isExternal = method.href?.startsWith('http');
                   const content = (
-                    <div className="panel h-full rounded-3xl p-5 transition duration-300 hover:border-white/15">
+                    <div className="panel h-full rounded-3xl p-4 transition duration-300 hover:border-white/15 sm:p-5">
                       <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/[0.04]">
                         <Icon className="h-5 w-5 text-amber-300" />
                       </span>

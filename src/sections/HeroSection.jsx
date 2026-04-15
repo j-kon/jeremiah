@@ -6,6 +6,7 @@ import SocialLinks from '../components/SocialLinks';
 import TechBadge from '../components/TechBadge';
 import TechMarquee from '../components/TechMarquee';
 import { featuredStack, heroBadges, heroMetrics, heroTerminal, heroTracks, socialLinks } from '../data/portfolio';
+import { trackEvent } from '../lib/analytics';
 
 function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
@@ -101,11 +102,19 @@ function HeroSection() {
             </m.div>
 
             <m.div variants={heroItem} className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
-              <a href="#projects" className="btn-primary group w-full sm:w-auto">
+              <a
+                href="#projects"
+                className="btn-primary group w-full sm:w-auto"
+                onClick={() => trackEvent('hero_cta_click', { label: 'Explore Selected Work' })}
+              >
                 Explore Selected Work
                 <ArrowRight className="h-4 w-4 transition duration-300 group-hover:translate-x-0.5" />
               </a>
-              <a href="#contact" className="btn-secondary w-full sm:w-auto">
+              <a
+                href="#contact"
+                className="btn-secondary w-full sm:w-auto"
+                onClick={() => trackEvent('hero_cta_click', { label: 'Start a Conversation' })}
+              >
                 Start a Conversation
               </a>
             </m.div>

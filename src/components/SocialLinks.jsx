@@ -1,4 +1,5 @@
 import { ArrowUpRight, BookOpen, Github, Linkedin, Mail } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const iconMap = {
   github: Github,
@@ -18,6 +19,7 @@ function SocialLinks({ links }) {
           <a
             key={link.label}
             href={link.href}
+            onClick={() => trackEvent('social_link_click', { label: link.label, href: link.href })}
             className="group inline-flex w-full items-center justify-between gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-white/20 hover:bg-white/[0.06] sm:w-auto sm:justify-start sm:py-2"
             target={isExternal ? '_blank' : undefined}
             rel={isExternal ? 'noreferrer' : undefined}

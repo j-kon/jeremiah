@@ -5,7 +5,6 @@ export const navItems = [
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'community', label: 'Community' },
-  { id: 'library', label: 'Library' },
   { id: 'vision', label: 'Vision' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -33,6 +32,13 @@ export const socialLinks = [
     href: 'mailto:hello@jaykon.dev',
     icon: 'mail',
   },
+];
+
+export const pageLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/root-wallet', label: 'Root Wallet' },
+  { href: '/resume', label: 'Resume' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export const heroBadges = ['Root Wallet', '5+ Years Shipping', '20+ Events Led', 'Bitcoin x Flutter'];
@@ -162,25 +168,25 @@ export const flagshipCaseStudy = {
       title: 'Wallet Home',
       caption: 'Portfolio overview and recent activity in a polished app shell.',
       theme: 'Light',
-      src: 'https://raw.githubusercontent.com/j-kon/root_wallet/main/docs/screenshots/wallet-home-light.png',
+      src: '/root-wallet/wallet-home-light.png',
     },
     {
       title: 'Receive Flow',
       caption: 'Receive address generation and QR handoff on public testnet.',
       theme: 'Dark',
-      src: 'https://raw.githubusercontent.com/j-kon/root_wallet/main/docs/screenshots/receive-dark.png',
+      src: '/root-wallet/receive-dark.png',
     },
     {
       title: 'Send Review',
       caption: 'Amount, fee, and broadcast flow shaped for clarity and trust.',
       theme: 'Dark',
-      src: 'https://raw.githubusercontent.com/j-kon/root_wallet/main/docs/screenshots/send-dark.png',
+      src: '/root-wallet/send-dark.png',
     },
     {
       title: 'Security',
       caption: 'PIN, biometrics, and recovery re-auth treated as core product work.',
       theme: 'Light',
-      src: 'https://raw.githubusercontent.com/j-kon/root_wallet/main/docs/screenshots/security-light.png',
+      src: '/root-wallet/security-light.png',
     },
   ],
   decisions: [
@@ -207,6 +213,11 @@ export const flagshipCaseStudy = {
   ],
   links: [
     {
+      label: 'Open Full Case Study',
+      href: '/root-wallet',
+      internal: true,
+    },
+    {
       label: 'View GitHub Repo',
       href: 'https://github.com/j-kon/root_wallet',
     },
@@ -216,6 +227,60 @@ export const flagshipCaseStudy = {
     },
     {
       label: 'Browse Screenshot Guide',
+      href: 'https://github.com/j-kon/root_wallet/blob/main/docs/screenshots/README.md',
+    },
+  ],
+};
+
+export const rootWalletPage = {
+  title: 'Root Wallet',
+  subtitle: 'Case study',
+  eyebrow: 'Root Wallet / Case Study',
+  intro:
+    'Root Wallet is where the portfolio stops being directional and becomes concrete: wallet behavior, security-sensitive product flows, clean architecture, and Flutter delivery all meeting in one build.',
+  summary:
+    'The app is a self-custody Bitcoin wallet for public testnet with create and restore flows, send and receive, QR handoff, transaction history, app lock, biometrics, and golden-test-backed product surfaces.',
+  architecture: [
+    {
+      title: 'Feature-first clean architecture',
+      description:
+        'The codebase is organized around `app`, `core`, `features`, and `shared`, with each feature keeping presentation, domain, and data boundaries clear.',
+    },
+    {
+      title: 'Riverpod state orchestration',
+      description:
+        'Providers own async flows, state transitions, and multi-step interactions so widgets stay focused on rendering and user input.',
+    },
+    {
+      title: 'Data integrations kept out of widgets',
+      description:
+        'BDK, storage, share wrappers, URL launchers, and sync concerns live in the data layer instead of leaking into UI code.',
+    },
+  ],
+  productFlows: [
+    'Create or restore a Bitcoin testnet wallet.',
+    'Back up and confirm the recovery phrase.',
+    'Generate a receive address with QR handoff.',
+    'Review, fee-check, and broadcast send flows.',
+    'Lock the app behind PIN, biometrics, and recovery re-auth.',
+  ],
+  engineeringNotes: [
+    'Presentation renders state and captures user input.',
+    'Domain remains pure Dart and expresses business intent.',
+    'Data owns BDK wallet engine, persistence, and integrations.',
+    'Golden suites cover the app shell plus onboarding and security flows.',
+  ],
+  docs: [
+    {
+      label: 'GitHub Repository',
+      href: 'https://github.com/j-kon/root_wallet',
+    },
+    {
+      label: 'Architecture Document',
+      href: 'https://github.com/j-kon/root_wallet/blob/main/docs/architecture.md',
+    },
+    {
+      label: 'README Screenshot Guide',
       href: 'https://github.com/j-kon/root_wallet/blob/main/docs/screenshots/README.md',
     },
   ],
@@ -608,6 +673,27 @@ export const contactLanes = [
   'Developer relations and technical community building',
   'Early-stage product consulting and prototyping',
 ];
+
+export const resumeHighlights = [
+  '5+ years shipping mobile products with Flutter across real product constraints.',
+  'Built Root Wallet, an open-source self-custody Bitcoin wallet for public testnet.',
+  'Exploring wallet rails, Lightning product flows, and developer tooling direction.',
+  'Led 20+ community events and supported 300+ students through developer ecosystem work.',
+];
+
+export const resumeSections = {
+  strengths: [
+    'Flutter architecture, state, auth, APIs, and shipping discipline.',
+    'Bitcoin wallet UX, testnet product flows, and self-custody systems thinking.',
+    'Technical writing, community leadership, and builder-facing communication.',
+  ],
+  opportunities: [
+    'Bitcoin-native product engineering',
+    'Mobile wallet systems and Flutter infrastructure work',
+    'Developer relations and technical community leadership',
+    'Early-stage product consulting and prototyping',
+  ],
+};
 
 export const contactIntro =
   'I am open to startup roles, Bitcoin-native product teams, developer relations opportunities, thoughtful consulting, and technical partnerships where product quality and technical leverage both matter.';

@@ -79,8 +79,8 @@ function AboutSection() {
           <Reveal delay={0.18} className="panel-strong xl:col-span-2 p-5 sm:p-8">
             <div className="grid grid-cols-1 gap-8 xl:grid-cols-[0.78fr_1.22fr]">
               <div>
-                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Working With Me</p>
-                <h3 className="mt-4 font-display text-2xl font-semibold text-white sm:text-3xl">How I tend to add value on a team.</h3>
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">How I Think</p>
+                <h3 className="mt-4 font-display text-2xl font-semibold text-white sm:text-3xl">How I tend to think, build, and add value on a team.</h3>
               </div>
 
               <div className="grid gap-5">

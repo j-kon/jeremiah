@@ -1,6 +1,7 @@
 import { AnimatePresence, m, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { trackEvent } from '../lib/analytics';
 import Container from './Container';
 
 function Navbar({ items, activeSection }) {
@@ -31,8 +32,8 @@ function Navbar({ items, activeSection }) {
     >
       <Container className="pt-4">
         <div className="rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 shadow-panel backdrop-blur-xl sm:px-5">
-          <div className="flex items-center justify-between gap-4 xl:gap-5">
-            <a href="#home" className="flex min-w-0 shrink items-center gap-3">
+          <div className="flex items-center justify-between gap-3 xl:gap-4">
+            <a href="#home" className="flex min-w-0 shrink items-center gap-3" onClick={() => trackEvent('nav_click', { label: 'Brand Home' })}>
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.04] font-mono text-xs font-semibold uppercase tracking-[0.22em] text-amber-200">
                 JJ
               </span>
@@ -46,7 +47,7 @@ function Navbar({ items, activeSection }) {
 
             <div className="hidden min-w-0 flex-1 lg:block">
               <nav
-                className="flex min-w-max items-center gap-1 overflow-x-auto px-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                className="flex min-w-max items-center gap-0.5 overflow-x-auto px-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden xl:gap-1 xl:px-2"
                 aria-label="Primary"
               >
                 {items.map((item) => {
@@ -56,7 +57,8 @@ function Navbar({ items, activeSection }) {
                     <a
                       key={item.id}
                       href={`#${item.id}`}
-                      className={`relative shrink-0 rounded-full px-3 py-2 text-[13px] transition duration-300 xl:text-sm ${
+                      onClick={() => trackEvent('nav_click', { label: item.label, href: `#${item.id}` })}
+                      className={`relative shrink-0 rounded-full px-2.5 py-2 text-[13px] transition duration-300 xl:px-3 xl:text-sm ${
                         isActive
                           ? 'text-white'
                           : 'text-slate-400 hover:bg-white/[0.04] hover:text-white'
@@ -77,14 +79,8 @@ function Navbar({ items, activeSection }) {
               </nav>
             </div>
 
-            <div className="hidden shrink-0 items-center gap-3 lg:flex">
-              <span className="hidden whitespace-nowrap rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-[11px] font-medium text-emerald-200 min-[1700px]:inline-flex min-[1880px]:hidden">
-                Open to Bitcoin work
-              </span>
-              <span className="hidden whitespace-nowrap rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-[11px] font-medium text-emerald-200 min-[1880px]:inline-flex">
-                Open to Bitcoin, startup, and product work
-              </span>
-              <a href="#contact" className="btn-secondary">
+            <div className="hidden shrink-0 items-center gap-2.5 lg:flex xl:gap-3">
+              <a href="#contact" className="btn-secondary px-4 py-3 xl:px-4" onClick={() => trackEvent('nav_click', { label: 'Contact CTA', href: '#contact' })}>
                 Contact
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -120,6 +116,7 @@ function Navbar({ items, activeSection }) {
                       key={item.id}
                       href={`#${item.id}`}
                       onClick={closeMenu}
+                      onMouseDown={() => trackEvent('mobile_nav_click', { label: item.label, href: `#${item.id}` })}
                       className={`rounded-2xl px-4 py-3 text-sm transition duration-300 ${
                         isActive ? 'bg-white/[0.08] text-white' : 'text-slate-300 hover:bg-white/[0.05] hover:text-white'
                       }`}
@@ -131,7 +128,12 @@ function Navbar({ items, activeSection }) {
 
                 <div className="fine-line my-3" />
 
-                <a href="#contact" onClick={closeMenu} className="btn-primary w-full">
+                <a
+                  href="#contact"
+                  onClick={closeMenu}
+                  onMouseDown={() => trackEvent('mobile_nav_click', { label: 'Let’s Work Together', href: '#contact' })}
+                  className="btn-primary w-full"
+                >
                   Let&apos;s Work Together
                   <ArrowRight className="h-4 w-4" />
                 </a>

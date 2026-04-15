@@ -1,4 +1,5 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 import TechBadge from './TechBadge';
 
 function FlagshipCaseStudy({ caseStudy }) {
@@ -19,8 +20,9 @@ function FlagshipCaseStudy({ caseStudy }) {
               <a
                 key={link.label}
                 href={link.href}
-                target="_blank"
-                rel="noreferrer"
+                target={link.internal ? undefined : '_blank'}
+                rel={link.internal ? undefined : 'noreferrer'}
+                onClick={() => trackEvent('flagship_link_click', { label: link.label, href: link.href })}
                 className="btn-secondary w-full sm:w-auto"
               >
                 {link.label}

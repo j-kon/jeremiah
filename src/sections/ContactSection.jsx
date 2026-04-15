@@ -2,6 +2,7 @@ import { ArrowRight, BookOpen, Github, Linkedin, Mail, MapPin } from 'lucide-rea
 import Container from '../components/Container';
 import Reveal from '../components/Reveal';
 import { contactIntro, contactLanes, contactMethods } from '../data/portfolio';
+import { trackEvent } from '../lib/analytics';
 
 const iconMap = {
   mail: Mail,
@@ -37,14 +38,26 @@ function ContactSection() {
                 </div>
 
                 <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
-                  <a href="mailto:hello@jaykon.dev" className="btn-primary w-full sm:w-auto">
+                  <a
+                    href="mailto:hello@jaykon.dev"
+                    className="btn-primary w-full sm:w-auto"
+                    onClick={() => trackEvent('contact_cta_click', { label: 'Email Me' })}
+                  >
                     Email Me
                     <ArrowRight className="h-4 w-4" />
                   </a>
-                  <a href="/profile-brief.html" target="_blank" rel="noreferrer" className="btn-secondary w-full sm:w-auto">
-                    Open Profile Brief
+                  <a
+                    href="/resume"
+                    className="btn-secondary w-full sm:w-auto"
+                    onClick={() => trackEvent('contact_cta_click', { label: 'Open Resume' })}
+                  >
+                    Open Resume
                   </a>
-                  <a href="#projects" className="btn-secondary w-full sm:w-auto">
+                  <a
+                    href="#projects"
+                    className="btn-secondary w-full sm:w-auto"
+                    onClick={() => trackEvent('contact_cta_click', { label: 'View Projects' })}
+                  >
                     View Projects
                   </a>
                 </div>

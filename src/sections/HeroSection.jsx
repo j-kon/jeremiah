@@ -68,14 +68,14 @@ function HeroSection() {
               variants={heroItem}
               className="mt-8 max-w-full font-display text-[2.3rem] font-semibold leading-[1.04] tracking-tight text-white sm:text-5xl sm:leading-[0.98] xl:max-w-5xl xl:text-[4.65rem] xl:leading-[0.95]"
             >
-              Engineering mobile products now.
-              <span className="block text-amber-200">Building toward Bitcoin infrastructure, Lightning UX, and developer systems next.</span>
+              Shipping product-grade mobile systems.
+              <span className="block text-amber-200">Moving deeper into Bitcoin wallets, Lightning UX, and developer infrastructure.</span>
             </m.h1>
 
             <m.p variants={heroItem} className="mt-6 max-w-full text-base leading-8 text-slate-300 sm:max-w-2xl sm:text-xl">
-              I&apos;ve spent 5+ years shipping Flutter products with real-world product constraints. Now I&apos;m
-              deliberately moving deeper into wallet architecture, Lightning-powered flows, and technical systems that
-              make freedom technology more practical for real users.
+              Flutter engineer with 5+ years across architecture, auth, APIs, Firebase-backed systems, and mobile
+              delivery. I&apos;m now translating that execution discipline into self-custody wallet work, Lightning-flavored
+              product flows, and tools that help builders ship with more clarity.
             </m.p>
 
             <m.div variants={heroItem} className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -140,8 +140,8 @@ function HeroSection() {
                 </div>
                 <div className="relative mt-4 overflow-hidden rounded-2xl border border-white/10 bg-black/20 px-4 py-3 font-mono text-xs leading-6 text-slate-300">
                   <div className="command-sheen" />
-                  <span className="text-amber-300">$</span> build --now mobile.systems --next bitcoin.rails
-                  --edge developer.tools
+                  <span className="text-amber-300">$</span> ship flutter.systems --flagship root.wallet --next
+                  wallet.rails --edge dev.tools
                 </div>
               </div>
 
@@ -206,8 +206,8 @@ function HeroSection() {
                   whileHover={prefersReducedMotion ? undefined : { scale: 1.01 }}
                   transition={{ duration: 0.2 }}
                 >
-                  Increasingly focused on wallet rails, Lightning-enabled product flows, and tools that help
-                  developers think and ship with more clarity.
+                  Current signal: Root Wallet, Bitcoin product thinking, and a growing body of work around wallet rails,
+                  developer systems, and practical freedom tech.
                 </m.div>
               </div>
             </div>

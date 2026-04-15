@@ -12,8 +12,8 @@ function ExperienceSection() {
             <SectionHeading
               titleId="experience-heading"
               eyebrow="Experience"
-              title="Shipping mobile products across teams while building stronger systems intuition."
-              description="My experience spans multiple Flutter roles where the common thread has been reliable implementation, practical problem solving, and moving products forward with care."
+              title="A mobile product foundation built across multiple teams and delivery environments."
+              description="The common thread across these roles was ownership: taking product intent, integration complexity, and shipping pressure, then turning them into maintainable app behavior."
             />
           </Reveal>
 
@@ -36,6 +36,7 @@ function ExperienceSection() {
                       </div>
                     </div>
 
+                    <p className="mt-5 font-display text-xl font-semibold leading-8 text-white">{item.impact}</p>
                     <p className="mt-5 text-base leading-8 text-slate-300">{item.summary}</p>
 
                     <div className="mt-6 flex flex-wrap gap-2">

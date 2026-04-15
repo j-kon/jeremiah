@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeremiah Jacob | Profile Brief</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #06070a;
+        --panel: #0d111a;
+        --panel-strong: #0f1624;
+        --line: rgba(255, 255, 255, 0.1);
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --accent: #f5b544;
+        --cyan: #22d3ee;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(245, 181, 68, 0.08), transparent 24%),
+          linear-gradient(to bottom, #06070a 0%, #0a0d14 100%);
+        color: var(--text);
+      }
+
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 28px;
+        padding: 28px;
+        backdrop-filter: blur(18px);
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 20px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(245, 181, 68, 0.22);
+        background: rgba(245, 181, 68, 0.08);
+        color: #fde68a;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3, p {
+        margin: 0;
+      }
+
+      h1 {
+        margin-top: 18px;
+        font-family: "Space Grotesk", ui-sans-serif, sans-serif;
+        font-size: clamp(2.5rem, 6vw, 4.4rem);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+
+      h2 {
+        font-family: "Space Grotesk", ui-sans-serif, sans-serif;
+        font-size: 1.65rem;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+
+      p {
+        color: #d6dde8;
+        line-height: 1.8;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .accent {
+        color: var(--accent);
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        color: #dce4ef;
+        font-size: 0.86rem;
+      }
+
+      .two-col {
+        display: grid;
+        gap: 18px;
+      }
+
+      .list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .item {
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+
+      .item:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        text-decoration: none;
+      }
+
+      @media (min-width: 780px) {
+        .hero {
+          grid-template-columns: 1.15fr 0.85fr;
+          align-items: start;
+        }
+
+        .two-col {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: white;
+          color: black;
+        }
+
+        .panel {
+          background: white;
+          border-color: rgba(0, 0, 0, 0.12);
+          box-shadow: none;
+        }
+
+        p, .chip, .muted, .link {
+          color: #1f2937;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="panel hero">
+        <div>
+          <span class="eyebrow">Profile Brief</span>
+          <h1>Jeremiah Jacob <span class="accent">/ Jaykon</span></h1>
+          <p style="margin-top: 18px;">
+            Flutter engineer, Bitcoin builder, and community leader focused on product-grade mobile systems, wallet
+            infrastructure, Lightning-flavored product direction, and developer-focused tools.
+          </p>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.02);">
+          <p class="muted" style="text-transform: uppercase; letter-spacing: 0.22em; font-size: 12px; font-weight: 700;">Current Focus</p>
+          <div class="chips" style="margin-top: 16px;">
+            <span class="chip">Root Wallet</span>
+            <span class="chip">Bitcoin Wallet UX</span>
+            <span class="chip">Flutter Systems</span>
+            <span class="chip">Developer Tooling</span>
+            <span class="chip">Lightning Product Ideas</span>
+            <span class="chip">Community Building</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="two-col" style="margin-top: 18px;">
+        <article class="panel">
+          <h2>What I Build</h2>
+          <p style="margin-top: 16px;">
+            I have 5+ years of mobile engineering experience across Flutter product delivery, API integration,
+            authentication, Firebase-backed systems, and maintainable architecture. My work is increasingly moving
+            toward Bitcoin wallet infrastructure, Lightning-enabled product flows, and tools that help engineers ship
+            with more clarity.
+          </p>
+        </article>
+        <article class="panel">
+          <h2>Flagship Proof</h2>
+          <p style="margin-top: 16px;">
+            Root Wallet is an open-source self-custody Bitcoin wallet for public testnet built with Flutter, Riverpod,
+            BDK, secure storage, biometrics, and golden-test-backed UI coverage.
+          </p>
+        </article>
+      </section>
+
+      <section class="two-col" style="margin-top: 18px;">
+        <article class="panel">
+          <h2>Selected Strengths</h2>
+          <div class="list" style="margin-top: 18px;">
+            <div class="item">
+              <p><strong>Product-grade Flutter delivery</strong><br />Architecture, state, auth, APIs, and long-term maintainability.</p>
+            </div>
+            <div class="item">
+              <p><strong>Bitcoin-native direction</strong><br />Wallet UX, self-custody thinking, public testnet flows, and infrastructure curiosity.</p>
+            </div>
+            <div class="item">
+              <p><strong>Builder communication</strong><br />Writing, community leadership, and technical explanation as part of engineering work.</p>
+            </div>
+          </div>
+        </article>
+        <article class="panel">
+          <h2>Community Signal</h2>
+          <div class="list" style="margin-top: 18px;">
+            <div class="item">
+              <p><strong>20+ events organized</strong><br />Technical learning, community programs, and developer momentum.</p>
+            </div>
+            <div class="item">
+              <p><strong>300+ students impacted</strong><br />Built developer culture through GDSC leadership and practical education.</p>
+            </div>
+            <div class="item">
+              <p><strong>Writing on Bitcoin and technology</strong><br />Uses public notes to sharpen product thinking and explain ideas clearly.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel" style="margin-top: 18px;">
+        <h2>Best Fit Opportunities</h2>
+        <div class="chips" style="margin-top: 18px;">
+          <span class="chip">Bitcoin-native product engineering</span>
+          <span class="chip">Mobile wallet systems</span>
+          <span class="chip">Developer relations</span>
+          <span class="chip">Technical community leadership</span>
+          <span class="chip">Early-stage product consulting</span>
+        </div>
+      </section>
+
+      <section class="panel" style="margin-top: 18px;">
+        <h2>Links</h2>
+        <div class="links" style="margin-top: 18px;">
+          <a class="link" href="mailto:hello@jaykon.dev">Email</a>
+          <a class="link" href="https://github.com/j-kon/root_wallet">Root Wallet</a>
+          <a class="link" href="https://github.com/jaykon">GitHub</a>
+          <a class="link" href="https://www.linkedin.com/in/jaykon">LinkedIn</a>
+          <a class="link" href="https://medium.com/@jaykon">Medium</a>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>

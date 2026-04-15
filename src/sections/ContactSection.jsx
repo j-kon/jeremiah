@@ -1,7 +1,7 @@
 import { ArrowRight, BookOpen, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import Container from '../components/Container';
 import Reveal from '../components/Reveal';
-import { contactIntro, contactMethods } from '../data/portfolio';
+import { contactIntro, contactLanes, contactMethods } from '../data/portfolio';
 
 const iconMap = {
   mail: Mail,
@@ -25,10 +25,24 @@ function ContactSection() {
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">{contactIntro}</p>
 
+                <div className="mt-8 rounded-[28px] border border-white/10 bg-white/[0.03] p-5">
+                  <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Best Fit Collaboration Lanes</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {contactLanes.map((lane) => (
+                      <span key={lane} className="tag">
+                        {lane}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
                   <a href="mailto:hello@jaykon.dev" className="btn-primary w-full sm:w-auto">
                     Email Me
                     <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <a href="/profile-brief.html" target="_blank" rel="noreferrer" className="btn-secondary w-full sm:w-auto">
+                    Open Profile Brief
                   </a>
                   <a href="#projects" className="btn-secondary w-full sm:w-auto">
                     View Projects

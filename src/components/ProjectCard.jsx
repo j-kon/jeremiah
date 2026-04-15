@@ -20,7 +20,7 @@ function ProjectCard({ project, index }) {
           <div className={project.featured ? 'p-5 sm:p-8 xl:p-10' : 'p-5 sm:p-7 xl:p-9'}>
             <div className="flex flex-wrap items-center justify-between gap-3">
               <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
-                Project {String(index + 1).padStart(2, '0')}
+                Supporting Build {String(index + 1).padStart(2, '0')}
               </p>
             </div>
 

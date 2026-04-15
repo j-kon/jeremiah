@@ -5,6 +5,7 @@ export const navItems = [
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'community', label: 'Community' },
+  { id: 'library', label: 'Library' },
   { id: 'vision', label: 'Vision' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -34,7 +35,7 @@ export const socialLinks = [
   },
 ];
 
-export const heroBadges = ['Bitcoin', 'Flutter', 'Open Source', 'Community'];
+export const heroBadges = ['Root Wallet', '5+ Years Shipping', '20+ Events Led', 'Bitcoin x Flutter'];
 
 export const featuredStack = [
   'Flutter',
@@ -69,37 +70,37 @@ export const heroMetrics = [
 export const heroTerminal = [
   {
     label: 'mobile.products',
-    value: 'Flutter apps, scalable architecture, API-driven delivery',
+    value: 'Architecture, auth, API integrations, release-ready mobile delivery',
   },
   {
     label: 'bitcoin.systems',
-    value: 'Wallet rails, BDK testnet experiments, Lightning product ideas',
+    value: 'Root Wallet, BDK testnet flows, wallet UX, and self-custody product thinking',
   },
   {
     label: 'developer.culture',
-    value: 'Technical writing, community building, practical education',
+    value: '20+ events, 300+ students, technical writing, and practical education',
   },
 ];
 
 export const heroTracks = [
   {
-    label: 'Current Lane',
+    label: 'Shipping Now',
     description:
-      'Shipping polished Flutter products with strong architecture, API integration, auth flows, Firebase-backed systems, and mobile UX discipline.',
+      'Product-grade Flutter systems with strong architecture, API integration, auth flows, Firebase-backed delivery, and mobile UX discipline.',
   },
   {
-    label: 'Build Direction',
+    label: 'Going Deeper',
     description:
-      'Moving deeper into Bitcoin wallet infrastructure, Lightning-powered product flows, developer tooling, and freedom tech for emerging markets.',
+      'Root Wallet, wallet rails, Lightning-flavored product ideas, and developer tooling for builders working on real constraints.',
   },
 ];
 
 export const signalCards = [
   {
-    eyebrow: 'Current Positioning',
-    value: 'Mobile x Bitcoin',
+    eyebrow: 'Flagship Build',
+    value: 'Root Wallet',
     description:
-      'Positioning at the intersection of Flutter product engineering, wallet rails, Lightning experiments, and builder-focused systems.',
+      'A public open-source self-custody Bitcoin wallet that makes the shift from interest in wallet systems to actual product and architecture execution visible.',
   },
   {
     eyebrow: 'Execution',
@@ -114,10 +115,10 @@ export const signalCards = [
       'Organized programs and technical events that helped shape developer culture and support 300+ students with practical learning momentum.',
   },
   {
-    eyebrow: 'Narrative',
-    value: 'Build + Explain',
+    eyebrow: 'Direction',
+    value: 'Bitcoin + Dev Tools',
     description:
-      'Combining product work with writing, education, and Bitcoin thought-sharing so the technical direction is visible, not hidden.',
+      'Building toward wallet infrastructure, Lightning product flows, and tools that help engineers think and ship more clearly.',
   },
 ];
 
@@ -141,6 +142,84 @@ export const projectSignals = [
       'The through-line is clear: strong app execution today, deeper Bitcoin-native infrastructure and tooling tomorrow.',
   },
 ];
+
+export const flagshipCaseStudy = {
+  eyebrow: 'Flagship Case Study',
+  name: 'Root Wallet',
+  summary:
+    'A self-custody Bitcoin wallet built in Flutter for public testnet, designed to prove product quality, architecture discipline, and wallet UX thinking in one coherent app.',
+  thesis:
+    'Root Wallet is the clearest expression of where the work is going: not just mobile UI, but wallet behavior, security-sensitive product flows, state orchestration, and a codebase that stays understandable as complexity grows.',
+  stack: ['Flutter', 'Riverpod', 'BDK', 'Bitcoin Testnet', 'Flutter Secure Storage', 'Local Auth'],
+  metrics: [
+    { value: 'Public Testnet', label: 'Bitcoin environment' },
+    { value: 'Riverpod + BDK', label: 'App orchestration + wallet engine' },
+    { value: 'Golden Tests', label: 'High-value UI regression coverage' },
+    { value: 'PIN / Biometrics', label: 'Security-sensitive user flows' },
+  ],
+  screenshots: [
+    {
+      title: 'Wallet Home',
+      caption: 'Portfolio overview and recent activity in a polished app shell.',
+      theme: 'Light',
+      src: 'https://raw.githubusercontent.com/j-kon/root_wallet/main/docs/screenshots/wallet-home-light.png',
+    },
+    {
+      title: 'Receive Flow',
+      caption: 'Receive address generation and QR handoff on public testnet.',
+      theme: 'Dark',
+      src: 'https://raw.githubusercontent.com/j-kon/root_wallet/main/docs/screenshots/receive-dark.png',
+    },
+    {
+      title: 'Send Review',
+      caption: 'Amount, fee, and broadcast flow shaped for clarity and trust.',
+      theme: 'Dark',
+      src: 'https://raw.githubusercontent.com/j-kon/root_wallet/main/docs/screenshots/send-dark.png',
+    },
+    {
+      title: 'Security',
+      caption: 'PIN, biometrics, and recovery re-auth treated as core product work.',
+      theme: 'Light',
+      src: 'https://raw.githubusercontent.com/j-kon/root_wallet/main/docs/screenshots/security-light.png',
+    },
+  ],
+  decisions: [
+    {
+      title: 'Feature-first clean architecture',
+      description:
+        'Presentation stays focused on rendering and input, Riverpod providers orchestrate flows, domain remains pure Dart, and data owns BDK, storage, and sync integrations.',
+    },
+    {
+      title: 'Security as product, not a settings afterthought',
+      description:
+        'Recovery phrase access, app lock, PIN verification, and biometrics are designed as trust-sensitive flows instead of disconnected controls bolted on at the end.',
+    },
+    {
+      title: 'Polish backed by repeatable QA',
+      description:
+        'Golden coverage for the main shell plus onboarding and security flows helps protect visual quality while the app and design system continue to evolve.',
+    },
+  ],
+  nextSteps: [
+    'Push deeper into wallet sync, transaction details, and recovery ergonomics.',
+    'Strengthen the move from solid testnet product work to more production-grade wallet systems thinking.',
+    'Keep compounding architecture, security UX, and Bitcoin-native app design in public.',
+  ],
+  links: [
+    {
+      label: 'View GitHub Repo',
+      href: 'https://github.com/j-kon/root_wallet',
+    },
+    {
+      label: 'Read Architecture Notes',
+      href: 'https://github.com/j-kon/root_wallet/blob/main/docs/architecture.md',
+    },
+    {
+      label: 'Browse Screenshot Guide',
+      href: 'https://github.com/j-kon/root_wallet/blob/main/docs/screenshots/README.md',
+    },
+  ],
+};
 
 export const aboutParagraphs = [
   'I started by shipping mobile products with Flutter, building the kind of features that need to be dependable in the real world: authentication, API integrations, Firebase-backed systems, local persistence, and app architecture that can grow with product demands.',
@@ -213,38 +292,6 @@ export const skillGroups = [
 ];
 
 export const projects = [
-  {
-    name: 'Bitcoin Wallet Infrastructure',
-    status: 'Prototype',
-    tag: 'Self-Custody Direction',
-    description:
-      'Built and tested wallet functionality using Bitcoin Dev Kit on testnet, exploring transaction flow, wallet state management, and the foundations of self-custody architecture.',
-    stack: ['BDK', 'Bitcoin Testnet', 'Wallet Architecture', 'Flutter'],
-    highlights: [
-      'Experimented with send and receive flows to better understand wallet behavior in practice.',
-      'Explored self-custody patterns with an eye toward reliability, trust, and developer ergonomics.',
-      'Used hands-on testnet work to ground future wallet infrastructure ideas in technical reality.',
-    ],
-    whyItMatters:
-      'It shows a move beyond app-layer work into the mechanics of how Bitcoin products actually hold and move value.',
-    challenge:
-      'Understanding wallet state, transaction flow, and self-custody tradeoffs well enough to design something users can trust.',
-    direction:
-      'A foundation for deeper work in mobile wallet rails, signing flows, recovery thinking, and Bitcoin-native app architecture.',
-    proofLabel: 'Testnet System View',
-    proofTitle: 'Wallet flow mapped from receive address generation to transaction experimentation.',
-    proofMetrics: [
-      { value: 'BDK', label: 'Core toolkit' },
-      { value: 'UTXO', label: 'Model explored' },
-      { value: 'Testnet', label: 'Environment' },
-    ],
-    proofLines: ['generate.address()', 'sync.wallet_state()', 'compose.transaction()', 'broadcast -> validate flow'],
-    focus:
-      'A strategic foundation for deeper work in mobile wallet infrastructure and Bitcoin-native product development.',
-    href: '#contact',
-    linkLabel: 'Discuss Wallet Infrastructure',
-    featured: true,
-  },
   {
     name: 'Lightning-Powered Meal Ordering System',
     status: 'In Progress',
@@ -344,6 +391,7 @@ export const experience = [
   {
     company: 'Defixerhub',
     role: 'Flutter Developer',
+    impact: 'Shipped maintainable mobile product features while helping the app surface stay clean under changing requirements.',
     summary:
       'Contributed to Flutter product delivery with a focus on clean implementation, maintainable app structure, and turning evolving product requirements into reliable user-facing features.',
     themes: ['Architecture', 'Product Delivery', 'Cross-Functional Collaboration'],
@@ -351,6 +399,7 @@ export const experience = [
   {
     company: 'Jetz Technologies',
     role: 'Flutter Developer',
+    impact: 'Worked close to API-backed product flows where reliable state and integration quality directly affected delivery confidence.',
     summary:
       'Worked on mobile application flows that required strong API integration, thoughtful state management, and steady execution across feature delivery and refinement cycles.',
     themes: ['API Integration', 'State Management', 'Feature Ownership'],
@@ -358,6 +407,7 @@ export const experience = [
   {
     company: 'Zooch Solution',
     role: 'Flutter Developer',
+    impact: 'Built cross-platform experiences with an emphasis on usability, implementation discipline, and shipping quality.',
     summary:
       'Helped build cross-platform experiences with attention to usability, implementation quality, and the practical engineering discipline needed to ship and maintain products.',
     themes: ['Cross-Platform Apps', 'Quality Delivery', 'User Experience'],
@@ -365,6 +415,7 @@ export const experience = [
   {
     company: 'Quicktel Solution',
     role: 'Flutter Developer',
+    impact: 'Supported forward-moving releases across backend-connected mobile workflows and practical product iteration.',
     summary:
       'Supported product engineering efforts across mobile features, backend-connected workflows, and the iterative work required to keep releases useful, stable, and forward-moving.',
     themes: ['Mobile Workflows', 'Release Support', 'Execution Discipline'],
@@ -413,6 +464,72 @@ export const writingPreviews = [
     summary:
       'Lessons from organizing events and building communities where technical growth becomes social, practical, and repeatable.',
     href: 'https://medium.com/@jaykon',
+  },
+];
+
+export const writingArchive = [
+  {
+    title: 'Why wallet UX has to earn trust before it asks for conviction.',
+    format: 'Bitcoin Product Note',
+    summary:
+      'A writing direction around why self-custody products succeed or fail at the level of clarity, recovery, and everyday user confidence.',
+    topics: ['Wallet UX', 'Trust', 'Product Design'],
+    href: 'https://medium.com/@jaykon',
+  },
+  {
+    title: 'What Root Wallet taught me about state ownership and Bitcoin product boundaries.',
+    format: 'Build Log',
+    summary:
+      'A deeper explanation of why Riverpod orchestration, clean boundaries, and QA discipline matter more once wallet behavior enters the picture.',
+    topics: ['Root Wallet', 'Riverpod', 'Architecture'],
+    href: 'https://medium.com/@jaykon',
+  },
+  {
+    title: 'Freedom technology in emerging markets needs practical product decisions.',
+    format: 'Systems Essay',
+    summary:
+      'A note on resilience, self-custody, and why distribution, UX, and constraints matter just as much as protocol ideals.',
+    topics: ['Freedom Tech', 'Emerging Markets', 'Bitcoin'],
+    href: 'https://medium.com/@jaykon',
+  },
+  {
+    title: 'Developer culture compounds when people feel capable enough to keep shipping.',
+    format: 'Community Memo',
+    summary:
+      'Lessons from GDSC leadership, technical education, and creating environments where momentum feels achievable instead of intimidating.',
+    topics: ['Community', 'Leadership', 'Developer Culture'],
+    href: 'https://medium.com/@jaykon',
+  },
+];
+
+export const experiments = [
+  {
+    title: 'Root Wallet docs and QA surface',
+    status: 'Open Source',
+    description:
+      'Architecture notes, screenshot guidance, and golden-test-backed product surfaces make the work inspectable instead of vague.',
+    href: 'https://github.com/j-kon/root_wallet',
+  },
+  {
+    title: 'Lightning merchant flow exploration',
+    status: 'In Progress',
+    description:
+      'Payment clarity, invoice handoff, and merchant UX experiments around what practical Lightning checkout could feel like.',
+    href: '#projects',
+  },
+  {
+    title: 'checkPRD workflow direction',
+    status: 'Concept',
+    description:
+      'A systems idea for improving requirement clarity, architecture review, and engineering alignment before code drifts.',
+    href: '#projects',
+  },
+  {
+    title: 'Bitcoin + builder writing in public',
+    status: 'Ongoing',
+    description:
+      'Notes and essays used to sharpen product thinking around self-custody, freedom tech, and developer culture.',
+    href: '#library',
   },
 ];
 
@@ -485,5 +602,12 @@ export const contactMethods = [
   },
 ];
 
+export const contactLanes = [
+  'Bitcoin-native product engineering',
+  'Mobile wallet and Flutter systems work',
+  'Developer relations and technical community building',
+  'Early-stage product consulting and prototyping',
+];
+
 export const contactIntro =
-  'I am open to startup roles, Bitcoin-native product teams, developer relations opportunities, thoughtful consulting, and technical partnerships with builders who care about real-world impact.';
+  'I am open to startup roles, Bitcoin-native product teams, developer relations opportunities, thoughtful consulting, and technical partnerships where product quality and technical leverage both matter.';

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#05070C"/>
+  <rect x="40" y="40" width="1120" height="550" rx="28" fill="#0A0E17" stroke="#1E293B"/>
+  <path d="M40 140C180 84 292 56 438 56H1160V590H40V140Z" fill="url(#a)" fill-opacity=".24"/>
+  <path d="M672 72C868 72 1004 116 1160 194V590H458C516 432 604 254 672 72Z" fill="url(#b)" fill-opacity=".2"/>
+  <g opacity=".18">
+    <path d="M80 0V630" stroke="#94A3B8"/>
+    <path d="M160 0V630" stroke="#94A3B8"/>
+    <path d="M240 0V630" stroke="#94A3B8"/>
+    <path d="M320 0V630" stroke="#94A3B8"/>
+    <path d="M400 0V630" stroke="#94A3B8"/>
+    <path d="M480 0V630" stroke="#94A3B8"/>
+    <path d="M560 0V630" stroke="#94A3B8"/>
+    <path d="M640 0V630" stroke="#94A3B8"/>
+    <path d="M720 0V630" stroke="#94A3B8"/>
+    <path d="M800 0V630" stroke="#94A3B8"/>
+    <path d="M880 0V630" stroke="#94A3B8"/>
+    <path d="M960 0V630" stroke="#94A3B8"/>
+    <path d="M1040 0V630" stroke="#94A3B8"/>
+    <path d="M1120 0V630" stroke="#94A3B8"/>
+    <path d="M0 90H1200" stroke="#94A3B8"/>
+    <path d="M0 180H1200" stroke="#94A3B8"/>
+    <path d="M0 270H1200" stroke="#94A3B8"/>
+    <path d="M0 360H1200" stroke="#94A3B8"/>
+    <path d="M0 450H1200" stroke="#94A3B8"/>
+    <path d="M0 540H1200" stroke="#94A3B8"/>
+  </g>
+  <rect x="88" y="92" width="142" height="42" rx="21" fill="#121826" stroke="#334155"/>
+  <text x="114" y="119" fill="#F5B544" font-size="16" font-family="IBM Plex Mono, monospace" letter-spacing="2.8">JAYKON</text>
+  <text x="88" y="214" fill="#F8FAFC" font-size="72" font-family="Space Grotesk, Arial, sans-serif" font-weight="700">Jeremiah Jacob</text>
+  <text x="88" y="292" fill="#F5B544" font-size="52" font-family="Space Grotesk, Arial, sans-serif" font-weight="700">Flutter, Bitcoin Wallets,</text>
+  <text x="88" y="352" fill="#F5B544" font-size="52" font-family="Space Grotesk, Arial, sans-serif" font-weight="700">and Developer Systems</text>
+  <text x="88" y="425" fill="#CBD5E1" font-size="28" font-family="IBM Plex Sans, Arial, sans-serif">
+    Product-grade mobile engineering. Root Wallet. Lightning-flavored product thinking.
+  </text>
+  <text x="88" y="468" fill="#CBD5E1" font-size="28" font-family="IBM Plex Sans, Arial, sans-serif">
+    Community leadership. Technical writing. Freedom tech for emerging markets.
+  </text>
+  <rect x="88" y="510" width="304" height="54" rx="27" fill="#111827" stroke="#334155"/>
+  <text x="118" y="544" fill="#F8FAFC" font-size="22" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="600">
+    Root Wallet • Bitcoin Builder
+  </text>
+  <defs>
+    <radialGradient id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 70) rotate(67.259) scale(598.529 761.283)">
+      <stop stop-color="#F5B544"/>
+      <stop offset="1" stop-color="#F5B544" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(912 196) rotate(125.404) scale(500.746 693.641)">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

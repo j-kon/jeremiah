@@ -15,8 +15,8 @@ function CommunitySection() {
             <SectionHeading
               titleId="community-heading"
               eyebrow="Community & Writing"
-              title="Building is only part of the story. I also invest in ecosystems, conversations, and technical culture."
-              description="Community leadership and writing matter to me because they create leverage. They help ideas travel, help people feel included, and make technical work more durable over time."
+              title="I want the work to compound through products, communities, and conversations."
+              description="Community leadership matters to me because it creates leverage around the work. Good ecosystems help people feel capable, spread ideas further, and make technical momentum more durable."
             />
 
             <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -30,15 +30,16 @@ function CommunitySection() {
 
             <div className="panel mt-6 p-6">
               <p className="text-base leading-8 text-slate-300">
-                I want the portfolio to reflect someone who can build well and also help create direction around the
-                work. That includes mentoring, organizing, writing, and helping technical communities stay energized.
+                The community side of the portfolio is here to show that I don&apos;t only ship features. I also care
+                about helping people learn, giving ideas language, and making technical work feel more accessible and
+                more energizing.
               </p>
             </div>
 
             <div className="panel mt-6 overflow-hidden">
               <div className="border-b border-white/10 px-6 py-4">
-                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Writing Preview</p>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-white">Ideas I like to develop in public.</h3>
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Conversation Themes</p>
+                <h3 className="mt-3 font-display text-2xl font-semibold text-white">The ideas I keep returning to in public.</h3>
               </div>
 
               <div className="grid gap-px bg-white/10">
@@ -59,6 +60,13 @@ function CommunitySection() {
                     </a>
                   </Reveal>
                 ))}
+              </div>
+
+              <div className="border-t border-white/10 px-6 py-4">
+                <a href="#library" className="inline-flex items-center gap-2 text-sm font-semibold text-amber-200 transition duration-300 hover:text-amber-100">
+                  Browse the full writing library
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
               </div>
             </div>
           </Reveal>

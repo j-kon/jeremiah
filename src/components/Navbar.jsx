@@ -34,8 +34,17 @@ function Navbar({ items, activeSection }) {
         <div className="rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 shadow-panel backdrop-blur-xl sm:px-5">
           <div className="flex items-center justify-between gap-3 xl:gap-4">
             <a href="#home" className="flex min-w-0 shrink items-center gap-3" onClick={() => trackEvent('nav_click', { label: 'Brand Home' })}>
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.04] font-mono text-xs font-semibold uppercase tracking-[0.22em] text-amber-200">
+              <span className="relative grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.04] font-mono text-xs font-semibold uppercase tracking-[0.22em] text-amber-200">
                 JJ
+                {/* Orbital ring */}
+                <m.span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-[-4px] rounded-full border border-amber-300/20"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+                >
+                  <span className="absolute left-1/2 top-0 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-300/80 shadow-[0_0_6px_rgba(245,181,68,0.9)]" />
+                </m.span>
               </span>
               <div className="min-w-0 leading-none">
                 <p className="truncate font-display text-xs font-semibold text-white sm:text-sm">Jeremiah Jacob</p>

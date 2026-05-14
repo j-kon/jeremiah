@@ -1,5 +1,6 @@
-import { m, useReducedMotion } from 'framer-motion';
+import { m, useReducedMotion, useSpring } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { useRef } from 'react';
 import Reveal from './Reveal';
 import TechBadge from './TechBadge';
 
@@ -7,12 +8,35 @@ function ProjectCard({ project, index }) {
   const isAnchor = project.href.startsWith('#');
   const prefersReducedMotion = useReducedMotion();
   const isEven = index % 2 === 0;
+  const cardRef = useRef(null);
+
+  const rotateX = useSpring(0, { stiffness: 200, damping: 22, mass: 0.5 });
+  const rotateY = useSpring(0, { stiffness: 200, damping: 22, mass: 0.5 });
+
+  const handleMove = (e) => {
+    if (prefersReducedMotion) return;
+    const rect = cardRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    rotateY.set(x * 5);
+    rotateX.set(-y * 4);
+  };
+
+  const handleLeave = () => {
+    rotateX.set(0);
+    rotateY.set(0);
+  };
 
   return (
     <Reveal delay={index * 0.06}>
       <m.article
+        ref={cardRef}
         className="group panel-strong relative h-full overflow-hidden transition duration-300 hover:border-white/15"
-        whileHover={prefersReducedMotion ? undefined : { y: -8 }}
+        style={prefersReducedMotion ? undefined : { rotateX, rotateY, perspective: 1000, transformStyle: 'preserve-3d' }}
+        onMouseMove={handleMove}
+        onMouseLeave={handleLeave}
+        whileHover={prefersReducedMotion ? undefined : { y: -6 }}
         transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,181,68,0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(34,211,238,0.08),transparent_28%)] opacity-0 transition duration-500 group-hover:opacity-100" />
@@ -45,18 +69,21 @@ function ProjectCard({ project, index }) {
             </div>
 
             <div className="mt-8 grid gap-4 xl:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Why It Matters</p>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{project.whyItMatters}</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Challenge</p>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{project.challenge}</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Direction</p>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{project.direction}</p>
-              </div>
+              {[
+                { label: 'Why It Matters', text: project.whyItMatters },
+                { label: 'Challenge', text: project.challenge },
+                { label: 'Direction', text: project.direction },
+              ].map(({ label, text }) => (
+                <m.div
+                  key={label}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition duration-200 hover:border-white/15"
+                  whileHover={prefersReducedMotion ? undefined : { y: -3 }}
+                  transition={{ duration: 0.18 }}
+                >
+                  <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">{label}</p>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">{text}</p>
+                </m.div>
+              ))}
             </div>
           </div>
 
@@ -69,31 +96,53 @@ function ProjectCard({ project, index }) {
               </h4>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                {project.proofMetrics.map((metric) => (
-                  <div key={metric.label} className="rounded-2xl border border-white/10 bg-white/[0.03] p-3">
+                {project.proofMetrics.map((metric, i) => (
+                  <m.div
+                    key={metric.label}
+                    className="rounded-2xl border border-white/10 bg-white/[0.03] p-3"
+                    initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.35, delay: i * 0.07 }}
+                  >
                     <p className="font-display text-lg font-semibold text-white">{metric.value}</p>
                     <p className="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">{metric.label}</p>
-                  </div>
+                  </m.div>
                 ))}
               </div>
 
-              <div className="mt-5 rounded-2xl border border-white/10 bg-slate-950/80 p-4 font-mono text-xs text-slate-300">
-                {project.proofLines.map((line) => (
-                  <div key={line} className="flex items-center gap-2 py-1.5">
+              {/* Terminal lines with staggered reveal */}
+              <div className="mt-5 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/80 p-4 font-mono text-xs text-slate-300">
+                {project.proofLines.map((line, i) => (
+                  <m.div
+                    key={line}
+                    className="flex items-center gap-2 py-1.5"
+                    initial={prefersReducedMotion ? false : { opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.3, delay: i * 0.09 }}
+                  >
                     <span className="text-amber-300">$</span>
                     <span>{line}</span>
-                  </div>
+                  </m.div>
                 ))}
               </div>
             </div>
 
             <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Key Highlights</p>
             <ul className="mt-5 space-y-4 text-sm leading-7 text-slate-300">
-              {project.highlights.map((highlight) => (
-                <li key={highlight} className="flex gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-amber-300/80" />
+              {project.highlights.map((highlight, i) => (
+                <m.li
+                  key={highlight}
+                  className="flex gap-3"
+                  initial={prefersReducedMotion ? false : { opacity: 0, x: -8 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.3, delay: i * 0.07 }}
+                >
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-300/80" />
                   <span>{highlight}</span>
-                </li>
+                </m.li>
               ))}
             </ul>
 

@@ -12,7 +12,7 @@ export default {
         accentSoft: '#2c210b',
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
+        display: ['"Syne"', 'sans-serif'],
         body: ['"IBM Plex Sans"', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'monospace'],
       },

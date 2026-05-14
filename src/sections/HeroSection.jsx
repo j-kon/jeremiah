@@ -7,9 +7,40 @@ import TechBadge from '../components/TechBadge';
 import TechMarquee from '../components/TechMarquee';
 import { featuredStack, heroBadges, heroMetrics, heroTerminal, heroTracks, socialLinks } from '../data/portfolio';
 import { trackEvent } from '../lib/analytics';
+import { useCountUp } from '../hooks/useCountUp';
+import { useBitcoinBlockHeight } from '../hooks/useBitcoinBlockHeight';
+import MagneticButton from '../components/MagneticButton';
+import WordReveal from '../components/WordReveal';
+import { useTypewriter } from '../hooks/useTypewriter';
+
+function AnimatedMetric({ value, label }) {
+  const numeric = parseInt(value.replace(/\D/g, ''), 10);
+  const suffix = value.replace(/[0-9]/g, '');
+  const [count, ref] = useCountUp(numeric, 1.6);
+
+  return (
+    <div
+      ref={ref}
+      className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-white/15"
+    >
+      <p className="font-display text-2xl font-semibold text-white">
+        {count}
+        {suffix}
+      </p>
+      <p className="mt-1 text-sm leading-6 text-slate-400">{label}</p>
+    </div>
+  );
+}
 
 function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
+  const blockHeight = useBitcoinBlockHeight();
+  const terminalText = 'ship flutter.systems --flagship root.wallet --next wallet.rails --edge dev.tools';
+  const { displayed: typedCmd, done: typingDone } = useTypewriter(terminalText, {
+    speed: 28,
+    startDelay: prefersReducedMotion ? 0 : 1400,
+    enabled: !prefersReducedMotion,
+  });
 
   const heroContainer = {
     hidden: {},
@@ -64,14 +95,19 @@ function HeroSection() {
               </span>
             </m.div>
 
-            <m.h1
+            <h1
               id="hero-title"
-              variants={heroItem}
-              className="mt-8 max-w-full font-display text-[2.3rem] font-semibold leading-[1.04] tracking-tight text-white sm:text-5xl sm:leading-[0.98] xl:max-w-5xl xl:text-[4.65rem] xl:leading-[0.95]"
+              className="mt-8 max-w-full font-display text-[2.3rem] font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl sm:leading-[1.05] xl:max-w-5xl xl:text-[4.65rem] xl:leading-[1.0]"
             >
-              Shipping product-grade mobile systems.
-              <span className="block text-amber-200">Moving deeper into Bitcoin wallets, Lightning UX, and developer infrastructure.</span>
-            </m.h1>
+              <WordReveal delay={0.25} stagger={0.06}>
+                Shipping product-grade mobile systems.
+              </WordReveal>
+              <span className="mt-1 block text-amber-200">
+                <WordReveal delay={0.72} stagger={0.048}>
+                  Moving deeper into Bitcoin wallets, Lightning UX, and developer infrastructure.
+                </WordReveal>
+              </span>
+            </h1>
 
             <m.p variants={heroItem} className="mt-6 max-w-full text-base leading-8 text-slate-300 sm:max-w-2xl sm:text-xl">
               Flutter engineer with 5+ years across architecture, auth, APIs, Firebase-backed systems, and mobile
@@ -93,8 +129,8 @@ function HeroSection() {
                 <m.span
                   key={badge}
                   className="tag"
-                  whileHover={prefersReducedMotion ? undefined : { y: -4 }}
-                  transition={{ duration: 0.2, delay: index * 0.02 }}
+                  whileHover={prefersReducedMotion ? undefined : { y: -5, scale: 1.04 }}
+                  transition={{ duration: 0.22, delay: index * 0.04 }}
                 >
                   {badge}
                 </m.span>
@@ -102,21 +138,25 @@ function HeroSection() {
             </m.div>
 
             <m.div variants={heroItem} className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
-              <a
-                href="#projects"
-                className="btn-primary group w-full sm:w-auto"
-                onClick={() => trackEvent('hero_cta_click', { label: 'Explore Selected Work' })}
-              >
-                Explore Selected Work
-                <ArrowRight className="h-4 w-4 transition duration-300 group-hover:translate-x-0.5" />
-              </a>
-              <a
-                href="#contact"
-                className="btn-secondary w-full sm:w-auto"
-                onClick={() => trackEvent('hero_cta_click', { label: 'Start a Conversation' })}
-              >
-                Start a Conversation
-              </a>
+              <MagneticButton className="w-full sm:w-auto">
+                <a
+                  href="#projects"
+                  className="btn-primary group w-full"
+                  onClick={() => trackEvent('hero_cta_click', { label: 'Explore Selected Work' })}
+                >
+                  Explore Selected Work
+                  <ArrowRight className="h-4 w-4 transition duration-300 group-hover:translate-x-0.5" />
+                </a>
+              </MagneticButton>
+              <MagneticButton className="w-full sm:w-auto">
+                <a
+                  href="#contact"
+                  className="btn-secondary w-full"
+                  onClick={() => trackEvent('hero_cta_click', { label: 'Start a Conversation' })}
+                >
+                  Start a Conversation
+                </a>
+              </MagneticButton>
             </m.div>
 
             <m.div variants={heroItem} className="mt-10">
@@ -149,9 +189,30 @@ function HeroSection() {
                 </div>
                 <div className="relative mt-4 overflow-hidden rounded-2xl border border-white/10 bg-black/20 px-4 py-3 font-mono text-xs leading-6 text-slate-300">
                   <div className="command-sheen" />
-                  <span className="text-amber-300">$</span> ship flutter.systems --flagship root.wallet --next
-                  wallet.rails --edge dev.tools
+                  <span className="text-amber-300">$ </span>
+                  {prefersReducedMotion ? terminalText : typedCmd}
+                  {!typingDone && !prefersReducedMotion ? (
+                    <span className="ml-px inline-block h-[0.85em] w-[2px] translate-y-[1px] animate-pulse bg-amber-300" />
+                  ) : null}
                 </div>
+
+                {blockHeight ? (
+                  <m.div
+                    className="mt-3 flex items-center gap-3 rounded-xl border border-amber-300/10 bg-amber-300/[0.04] px-3 py-2"
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <span className="relative flex h-2 w-2 shrink-0">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-300 opacity-60" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-300" />
+                    </span>
+                    <p className="font-mono text-[0.65rem] text-slate-400">
+                      BTC block height{' '}
+                      <span className="font-semibold text-amber-200">#{blockHeight.toLocaleString()}</span>
+                    </p>
+                  </m.div>
+                ) : null}
               </div>
 
               <div className="space-y-6 p-6 sm:p-7">
@@ -176,13 +237,7 @@ function HeroSection() {
 
                 <div className="grid gap-3 md:grid-cols-3">
                   {heroMetrics.map((metric) => (
-                    <div
-                      key={metric.label}
-                      className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-white/15"
-                    >
-                      <p className="font-display text-2xl font-semibold text-white">{metric.value}</p>
-                      <p className="mt-1 text-sm leading-6 text-slate-400">{metric.label}</p>
-                    </div>
+                    <AnimatedMetric key={metric.label} value={metric.value} label={metric.label} />
                   ))}
                 </div>
 
@@ -196,12 +251,13 @@ function HeroSection() {
                     {featuredStack.map((item, index) => (
                       <m.div
                         key={item}
-                        initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.94 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={prefersReducedMotion ? false : { opacity: 0, y: 10, scale: 0.94 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.12 }}
                         transition={{
-                          opacity: { duration: 0.35, delay: index * 0.03 },
-                          scale: { duration: 0.35, delay: index * 0.03 },
+                          opacity: { duration: 0.4, delay: 0.05 + index * 0.055 },
+                          y: { duration: 0.4, delay: 0.05 + index * 0.055, ease: [0.22, 1, 0.36, 1] },
+                          scale: { duration: 0.4, delay: 0.05 + index * 0.055 },
                         }}
                       >
                         <TechBadge name={item} variant="tile" />

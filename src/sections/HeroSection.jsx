@@ -97,7 +97,7 @@ function HeroSection() {
 
             <h1
               id="hero-title"
-              className="mt-8 max-w-full font-display text-[2.3rem] font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl sm:leading-[1.05] xl:max-w-5xl xl:text-[4.65rem] xl:leading-[1.0]"
+              className="mt-8 max-w-full font-display text-[1.9rem] font-semibold leading-[1.1] tracking-tight text-white sm:text-4xl sm:leading-[1.05] xl:max-w-5xl xl:text-[3.4rem] xl:leading-[1.0]"
             >
               <WordReveal delay={0.25} stagger={0.06}>
                 Shipping product-grade mobile systems.

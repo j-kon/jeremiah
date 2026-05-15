@@ -1,5 +1,6 @@
 import { m, useReducedMotion } from 'framer-motion';
-import { ArrowRight, BookOpen, Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { SiMedium } from 'react-icons/si';
 import Container from '../components/Container';
 import MagneticButton from '../components/MagneticButton';
 import Reveal from '../components/Reveal';
@@ -11,7 +12,7 @@ const iconMap = {
   location: MapPin,
   github: Github,
   linkedin: Linkedin,
-  medium: BookOpen,
+  medium: SiMedium,
 };
 
 const iconAccent = {

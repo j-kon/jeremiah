@@ -1,10 +1,11 @@
-import { ArrowUpRight, BookOpen, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
+import { SiMedium } from 'react-icons/si';
 import { trackEvent } from '../lib/analytics';
 
 const iconMap = {
   github: Github,
   linkedin: Linkedin,
-  medium: BookOpen,
+  medium: SiMedium,
   mail: Mail,
 };
 

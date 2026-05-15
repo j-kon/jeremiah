@@ -120,7 +120,7 @@
   }
 
   .section-shell {
-    @apply scroll-mt-28 py-20 sm:py-24;
+    @apply scroll-mt-28 py-10 sm:py-14;
   }
 
   .eyebrow {

@@ -1,12 +1,17 @@
+import { AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
 import Container from '../components/Container';
 import FlagshipCaseStudy from '../components/FlagshipCaseStudy';
 import ProjectCard from '../components/ProjectCard';
+import ProjectCaseStudyModal from '../components/ProjectCaseStudyModal';
 import Reveal from '../components/Reveal';
 import SectionHeading from '../components/SectionHeading';
 import { experiments, flagshipCaseStudy, projectSignals, projects } from '../data/portfolio';
 
 function ProjectsSection() {
+  const [activeCaseStudy, setActiveCaseStudy] = useState(null);
+
   return (
     <section id="projects" className="section-shell" aria-labelledby="projects-heading">
       <Container>
@@ -47,7 +52,12 @@ function ProjectsSection() {
 
         <div className="mt-12 space-y-8">
           {projects.map((project, index) => (
-            <ProjectCard key={project.name} project={project} index={index} />
+            <ProjectCard
+              key={project.name}
+              project={project}
+              index={index}
+              onOpenCaseStudy={setActiveCaseStudy}
+            />
           ))}
         </div>
 
@@ -93,6 +103,12 @@ function ProjectsSection() {
           </div>
         </div>
       </Container>
+
+      <AnimatePresence>
+        {activeCaseStudy ? (
+          <ProjectCaseStudyModal project={activeCaseStudy} onClose={() => setActiveCaseStudy(null)} />
+        ) : null}
+      </AnimatePresence>
     </section>
   );
 }

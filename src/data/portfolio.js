@@ -3,6 +3,7 @@ export const navItems = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Expertise' },
   { id: 'projects', label: 'Projects' },
+  { id: 'open-source', label: 'Open Source' },
   { id: 'experience', label: 'Experience' },
   { id: 'community', label: 'Community' },
   { id: 'vision', label: 'Vision' },
@@ -358,6 +359,7 @@ export const skillGroups = [
 
 export const projects = [
   {
+    slug: 'lightning-meal-ordering',
     name: 'Lightning-Powered Meal Ordering System',
     status: 'In Progress',
     tag: 'Merchant Experience',
@@ -387,8 +389,49 @@ export const projects = [
       'Shows a strong interest in turning Bitcoin rails into usable consumer and merchant products.',
     href: '#projects',
     linkLabel: 'View Concept',
+    caseStudy: {
+      eyebrow: 'Project Case Study',
+      summary:
+        'A Lightning-native ordering prototype exploring how Bitcoin payments can feel fast, legible, and merchant-friendly in a real checkout flow instead of a protocol demo.',
+      role: 'Product engineer shaping the payment journey, interaction model, and merchant-facing checkout logic.',
+      impact:
+        'Turned a broad Lightning exploration into a concrete commerce flow with clearer product assumptions, trust-sensitive handoff points, and a reusable framing for merchant payment UX.',
+      problem:
+        'Most Lightning demos prove that invoices can be paid, but not that checkout feels calm, obvious, and practical for merchants managing real orders.',
+      constraints: [
+        'Customers need to understand payment state immediately without learning Bitcoin jargon.',
+        'Merchants need confidence that settlement happened before the kitchen or fulfillment flow advances.',
+        'The experience has to preserve Lightning speed without making the checkout feel technical.',
+      ],
+      decisions: [
+        {
+          title: 'Design around payment confidence',
+          description:
+            'The flow emphasizes invoice request, confirmation, and merchant settlement state so both sides understand exactly what happened before the order moves forward.',
+        },
+        {
+          title: 'Treat Lightning as UX infrastructure',
+          description:
+            'Instead of centering protocol novelty, the prototype uses Lightning to improve wait time, payment clarity, and reduced checkout hesitation.',
+        },
+        {
+          title: 'Model for everyday commerce',
+          description:
+            'The ordering context keeps the concept anchored in real merchant behavior where speed, trust, and handoff reliability matter more than technical spectacle.',
+        },
+      ],
+      outcomes: [
+        'Defined a clear merchant-to-customer payment flow from meal selection through settlement confirmation.',
+        'Framed Lightning as a practical retail surface instead of a purely experimental payment rail.',
+        'Created a stronger portfolio signal around Bitcoin product thinking in commerce contexts.',
+      ],
+      links: [
+        { label: 'Jump to Contact', href: '#contact', internal: true },
+      ],
+    },
   },
   {
+    slug: 'checkprd-tooling-direction',
     name: 'checkPRD / Developer Tooling Direction',
     status: 'Case Study',
     tag: 'Workflow Systems',
@@ -418,8 +461,49 @@ export const projects = [
       'Signals product taste and an interest in building tools for other engineers, not only end-user apps.',
     href: '#contact',
     linkLabel: 'Explore Tooling Ideas',
+    caseStudy: {
+      eyebrow: 'Project Case Study',
+      summary:
+        'A tooling direction for helping teams review product requirements, architecture assumptions, and implementation intent before ambiguity turns into delivery drift.',
+      role: 'Builder and systems thinker shaping the concept, workflow framing, and value proposition for engineering teams.',
+      impact:
+        'Converted a vague interest in better planning into a sharper tool concept centered on requirement quality, architectural review, and earlier engineering leverage.',
+      problem:
+        'Teams often start coding from incomplete PRDs, weak system reasoning, or late review loops, which creates rework that is expensive but preventable.',
+      constraints: [
+        'The tool has to improve clarity without introducing heavyweight process.',
+        'Outputs need to be useful to product, engineering, and reviewers at the same time.',
+        'The workflow should fit into how teams already plan and ship, not replace everything.',
+      ],
+      decisions: [
+        {
+          title: 'Start before code exists',
+          description:
+            'The concept focuses on the phase where teams can still correct direction cheaply: unclear requirements, weak constraints, and missing architecture thinking.',
+        },
+        {
+          title: 'Bridge intent and implementation',
+          description:
+            'The workflow is designed to connect what the product is trying to achieve with how the system may need to be shaped to support it.',
+        },
+        {
+          title: 'Optimize for leverage, not bureaucracy',
+          description:
+            'The goal is concise review surfaces that raise the quality of discussion without slowing down teams that need to move.',
+        },
+      ],
+      outcomes: [
+        'Clarified a developer-tooling direction that fits naturally beside product and architecture work.',
+        'Strengthened the portfolio narrative beyond app delivery into systems and workflow thinking.',
+        'Established a reusable concept for future prototypes, docs, or internal tooling experiments.',
+      ],
+      links: [
+        { label: 'Start a Conversation', href: '#contact', internal: true },
+      ],
+    },
   },
   {
+    slug: 'flutter-product-work',
     name: 'Flutter Product Work',
     status: 'Open Source Direction',
     tag: 'Professional Delivery',
@@ -449,6 +533,46 @@ export const projects = [
       'Establishes strong execution in mobile engineering while supporting a move into deeper systems work.',
     href: '#experience',
     linkLabel: 'See Experience',
+    caseStudy: {
+      eyebrow: 'Project Case Study',
+      summary:
+        'A body of production-oriented Flutter work covering auth, APIs, state, architecture, and feature delivery discipline across cross-platform mobile products.',
+      role: 'Flutter engineer shipping user-facing features, integrating backend systems, and keeping app architecture maintainable as complexity grows.',
+      impact:
+        'Built the execution base that makes the portfolio credible: dependable delivery, clean app structure, and product-quality implementation across real mobile surfaces.',
+      problem:
+        'Shipping mobile features quickly is not enough on its own; the codebase also has to stay stable, understandable, and capable of supporting future product changes.',
+      constraints: [
+        'Features had to integrate with backend services and auth-sensitive user flows.',
+        'State and architecture choices needed to support continued delivery without creating fragile screens.',
+        'Quality mattered across both product polish and maintainability under evolving requirements.',
+      ],
+      decisions: [
+        {
+          title: 'Favor maintainable app structure',
+          description:
+            'Architecture choices were made to keep features understandable, integration boundaries clean, and future delivery safer.',
+        },
+        {
+          title: 'Treat product quality as engineering work',
+          description:
+            'Responsiveness, usability, and stable behavior were approached as core delivery concerns instead of final-stage polish.',
+        },
+        {
+          title: 'Use shipping discipline as foundation',
+          description:
+            'This work intentionally builds the credibility needed for deeper wallet, Bitcoin, and developer-systems projects later in the portfolio.',
+        },
+      ],
+      outcomes: [
+        'Delivered a strong cross-platform execution foundation across features, integrations, and mobile UX.',
+        'Demonstrated reliable engineering judgment in real product contexts instead of tutorial-style apps.',
+        'Created the baseline from which more ambitious Bitcoin-native and tooling work can compound.',
+      ],
+      links: [
+        { label: 'Review Experience', href: '#experience', internal: true },
+      ],
+    },
   },
 ];
 
@@ -595,6 +719,208 @@ export const experiments = [
     description:
       'Notes and essays used to sharpen product thinking around self-custody, freedom tech, and developer culture.',
     href: '#library',
+  },
+];
+
+export const openSourceSignals = [
+  {
+    label: 'Merged PRs',
+    value: '5 upstream merges',
+    description:
+      'Verified merged contributions across bitcoindevkit/bdk-dart and bitcoindevkit/bdk-ffi, spanning wallet tests, demo flows, and release-readiness work.',
+  },
+  {
+    label: 'Review Surface',
+    value: 'PR reviews + ACKs',
+    description:
+      'Contribution here is not only code authoring. It also includes review feedback, request-changes notes, approvals, and follow-up comments on other maintainers’ work.',
+  },
+  {
+    label: 'Issue Threads',
+    value: 'Roadmap participation',
+    description:
+      'There is visible participation in roadmap and troubleshooting threads around dev experience, release upgrades, and test cleanup direction.',
+  },
+];
+
+export const openSourceProjects = [
+  {
+    title: 'BDK Dart Contributions',
+    status: 'Merged + Reviewed',
+    description:
+      'Active upstream work in the Dart bindings and reference app surface, including authored merges, review comments, approvals, and roadmap discussion from a Flutter/mobile perspective.',
+    proof: [
+      'Merged PRs: #62 transaction detail scaffold, #59 pub.dev metadata and publish readiness',
+      'Reviewed PR #65 with comments on BIP-39 validation, mnemonic UX hardening, and then approved after follow-up',
+      'Reviewed open PR #22 with concrete CI, secret-scoping, and maintainability feedback that was later addressed by the author',
+      'Commented on issues #16 and #55 around release readiness, dev experience, and dependency-upgrade direction',
+    ],
+    stack: ['Flutter', 'Dart', 'BDK', 'Developer Experience'],
+    href: 'https://github.com/bitcoindevkit/bdk-dart',
+    linkLabel: 'Open bdk-dart',
+  },
+  {
+    title: 'BDK FFI Contributions',
+    status: 'Merged + Reviewed',
+    description:
+      'Visible participation in the Rust/FFI layer through merged test improvements, wallet smoke tests, PR review threads, and issue discussion around test hygiene.',
+    proof: [
+      'Merged PRs: #974 offline wallet smoke tests and #982 noisy test print cleanup',
+      'Reviewed PR #981, requested a README command fix, then approved once the user-facing issue was resolved',
+      'Commented on release PR #971 with test-quality feedback around the new sighash API behavior',
+      'Commented on issue #852 before taking on the cleanup that later became merged PR #982',
+    ],
+    stack: ['Rust', 'FFI', 'Wallet Testing', 'Review Work'],
+    href: 'https://github.com/bitcoindevkit/bdk-ffi',
+    linkLabel: 'Open bdk-ffi',
+  },
+  {
+    title: 'How The Contribution Shows Up',
+    status: 'Public Evidence',
+    description:
+      'The strongest signal is breadth: code merged upstream, issue participation, detailed review comments, approvals, and involvement even in PRs that were ultimately closed.',
+    proof: [
+      'Merged work across both the Dart bindings layer and the underlying FFI project',
+      'Review participation includes request-changes, follow-up ACKs, and security/maintainability feedback',
+      'Closed PR context is also part of the record: #981 was ultimately closed for project-scope reasons after your review helped catch and resolve a concrete README issue',
+      'This makes the open source section about real upstream collaboration, not only personal repos',
+    ],
+    stack: ['Upstream Collaboration', 'Code Review', 'Issue Discussion'],
+    href: '#vision',
+    linkLabel: 'See Direction',
+  },
+];
+
+export const openSourceTimelineFilters = ['All', 'Code', 'Review', 'Discussion'];
+
+export const openSourceStats = [
+  {
+    value: '5',
+    label: 'Merged PRs',
+    detail: 'Across bdk-dart and bdk-ffi',
+  },
+  {
+    value: '4+',
+    label: 'Reviewed PRs',
+    detail: 'With comments, request-changes, or ACKs',
+  },
+  {
+    value: '4',
+    label: 'Issue Threads',
+    detail: 'Roadmap and troubleshooting discussions joined',
+  },
+  {
+    value: '2',
+    label: 'Repos',
+    detail: 'Active contribution surfaces in the BDK ecosystem',
+  },
+  {
+    value: '2026-05-12',
+    label: 'Latest Activity',
+    detail: 'Most recent visible BDK review activity',
+  },
+];
+
+export const openSourceTimeline = [
+  {
+    type: 'Review',
+    repo: 'bdk-dart',
+    date: '2026-05-12',
+    title: 'Reviewed precompiled-binaries PR with CI and secret-scoping feedback',
+    summary:
+      'Left concrete review comments on PR #22 covering archived GitHub Actions usage, broad secret inheritance, and duplicated CLI logic, with follow-up fixes later acknowledged in-thread.',
+    href: 'https://github.com/bitcoindevkit/bdk-dart/pull/22',
+    cta: 'Open PR #22',
+  },
+  {
+    type: 'Review',
+    repo: 'bdk-ffi',
+    date: '2026-04-29',
+    title: 'Reviewed release PR test coverage around the new sighash path',
+    summary:
+      'Flagged that a new sighash test in PR #971 could pass without exercising the intended behavior when no UTXOs were available, pushing for a stronger assertion path.',
+    href: 'https://github.com/bitcoindevkit/bdk-ffi/pull/971',
+    cta: 'Open PR #971',
+  },
+  {
+    type: 'Review',
+    repo: 'bdk-ffi',
+    date: '2026-04-29',
+    title: 'Requested a README fix on Swift example PR, then approved after follow-up',
+    summary:
+      'Reviewed PR #981, caught a user-facing mismatch between the documented `swift run` command and the actual executable target, then approved once it was corrected.',
+    href: 'https://github.com/bitcoindevkit/bdk-ffi/pull/981',
+    cta: 'Open PR #981',
+  },
+  {
+    type: 'Code',
+    repo: 'bdk-ffi',
+    date: '2026-04-24',
+    title: 'Merged test cleanup PR in bdk-ffi',
+    summary:
+      'PR #982 removed noisy print and debug output from targeted Rust test files while preserving behavior and tightening signal quality in successful test runs.',
+    href: 'https://github.com/bitcoindevkit/bdk-ffi/pull/982',
+    cta: 'Open PR #982',
+  },
+  {
+    type: 'Code',
+    repo: 'bdk-ffi',
+    date: '2026-04-22',
+    title: 'Merged offline wallet smoke tests in bdk-ffi',
+    summary:
+      'PR #974 added Rust-side wallet smoke tests covering realistic create-wallet, address reveal, derivation progression, and simple wallet usage flows.',
+    href: 'https://github.com/bitcoindevkit/bdk-ffi/pull/974',
+    cta: 'Open PR #974',
+  },
+  {
+    type: 'Review',
+    repo: 'bdk-dart',
+    date: '2026-04-30',
+    title: 'Reviewed wallet recovery flow and approved after follow-up',
+    summary:
+      'On PR #65, left comments around BIP-39 validation scope, relying on BDK as source of truth, and sensitive-input hardening before later approving once the tradeoffs were addressed.',
+    href: 'https://github.com/bitcoindevkit/bdk-dart/pull/65',
+    cta: 'Open PR #65',
+  },
+  {
+    type: 'Code',
+    repo: 'bdk-dart',
+    date: '2026-04-30',
+    title: 'Merged transaction detail scaffold into the bdk_demo flow',
+    summary:
+      'PR #62 added transaction detail navigation and rendering to the reference demo, building the app surface toward more realistic wallet behavior.',
+    href: 'https://github.com/bitcoindevkit/bdk-dart/pull/62',
+    cta: 'Open PR #62',
+  },
+  {
+    type: 'Discussion',
+    repo: 'bdk-ffi',
+    date: '2026-04-18',
+    title: 'Joined test-cleanup issue before taking on the implementation',
+    summary:
+      'In issue #852, scoped a conservative cleanup pass around noisy test output and clarified the plan to avoid behavior changes before turning that into the later merged PR.',
+    href: 'https://github.com/bitcoindevkit/bdk-ffi/issues/852',
+    cta: 'Open Issue #852',
+  },
+  {
+    type: 'Discussion',
+    repo: 'bdk-dart',
+    date: '2026-03-18',
+    title: 'Commented on bdk-dart release readiness from a Flutter/mobile lens',
+    summary:
+      'In issue #16, highlighted developer experience and the reference app as the two most critical ingredients for a production-ready bdk-dart release.',
+    href: 'https://github.com/bitcoindevkit/bdk-dart/issues/16',
+    cta: 'Open Issue #16',
+  },
+  {
+    type: 'Code',
+    repo: 'bdk-dart',
+    date: '2026-03-18',
+    title: 'Merged publish-readiness metadata work for bdk-dart',
+    summary:
+      'PR #59 added required pub.dev metadata and validated the package with a publish dry-run, moving the bindings closer to release readiness.',
+    href: 'https://github.com/bitcoindevkit/bdk-dart/pull/59',
+    cta: 'Open PR #59',
   },
 ];
 

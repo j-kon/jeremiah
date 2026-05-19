@@ -1,10 +1,11 @@
 import { m, useReducedMotion, useSpring } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useRef } from 'react';
+import { trackEvent } from '../lib/analytics';
 import Reveal from './Reveal';
 import TechBadge from './TechBadge';
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index, onOpenCaseStudy }) {
   const isAnchor = project.href.startsWith('#');
   const prefersReducedMotion = useReducedMotion();
   const isEven = index % 2 === 0;
@@ -26,6 +27,11 @@ function ProjectCard({ project, index }) {
   const handleLeave = () => {
     rotateX.set(0);
     rotateY.set(0);
+  };
+
+  const handleOpenCaseStudy = () => {
+    trackEvent('project_case_study_open', { project: project.slug });
+    onOpenCaseStudy(project);
   };
 
   return (
@@ -153,15 +159,24 @@ function ProjectCard({ project, index }) {
               <p className="mt-3 text-sm leading-7 text-slate-300">{project.focus}</p>
             </div>
 
-            <a
-              href={project.href}
-              className="mt-6 inline-flex w-full items-center justify-between gap-2 text-sm font-semibold text-white transition duration-300 hover:text-amber-200 sm:w-auto sm:justify-start"
-              target={!isAnchor ? '_blank' : undefined}
-              rel={!isAnchor ? 'noreferrer' : undefined}
-            >
-              {project.linkLabel}
-              <ArrowUpRight className="h-4 w-4 transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-            </a>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              {project.caseStudy ? (
+                <button type="button" onClick={handleOpenCaseStudy} className="btn-secondary w-full sm:w-auto">
+                  View Case Study
+                  <ArrowUpRight className="h-4 w-4" />
+                </button>
+              ) : null}
+
+              <a
+                href={project.href}
+                className="inline-flex w-full items-center justify-between gap-2 text-sm font-semibold text-white transition duration-300 hover:text-amber-200 sm:w-auto sm:justify-start"
+                target={!isAnchor ? '_blank' : undefined}
+                rel={!isAnchor ? 'noreferrer' : undefined}
+              >
+                {project.linkLabel}
+                <ArrowUpRight className="h-4 w-4 transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+            </div>
           </div>
         </div>
       </m.article>

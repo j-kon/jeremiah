@@ -594,6 +594,7 @@ export const experience = [
     company: 'Defixerhub',
     role: 'Full Stack Developer',
     period: 'March 2024 — February 2026',
+    highlight: 'Team Lead',
     impact: 'Owned the full product surface — mobile, backend, and frontend — while leading a team and shipping a reliable, scalable platform.',
     summary:
       'Developed and maintained Laravel backend services, admin dashboards, and REST APIs alongside cross-platform Flutter mobile apps and responsive React frontends. Led and mentored a team of developers, implemented CI/CD pipelines, and collaborated across product, design, and engineering to improve performance, security, and overall platform reliability.',

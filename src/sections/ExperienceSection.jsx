@@ -57,7 +57,14 @@ function ExperienceSection() {
                           Role {String(index + 1).padStart(2, '0')}
                         </p>
                         <h3 className="mt-2 font-display text-2xl font-semibold text-white">{item.company}</h3>
-                        <p className="mt-1 text-sm font-medium text-amber-200">{item.role}</p>
+                        <div className="mt-1 flex flex-wrap items-center gap-2">
+                          <p className="text-sm font-medium text-amber-200">{item.role}</p>
+                          {item.highlight && (
+                            <span className="rounded-full bg-amber-300/15 px-2.5 py-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-amber-300">
+                              {item.highlight}
+                            </span>
+                          )}
+                        </div>
                         {item.period && (
                           <p className="mt-0.5 font-mono text-xs text-slate-500">{item.period}</p>
                         )}

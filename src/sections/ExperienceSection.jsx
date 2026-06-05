@@ -57,6 +57,9 @@ function ExperienceSection() {
                         </p>
                         <h3 className="mt-2 font-display text-2xl font-semibold text-white">{item.company}</h3>
                         <p className="mt-1 text-sm font-medium text-amber-200">{item.role}</p>
+                        {item.period && (
+                          <p className="mt-0.5 font-mono text-xs text-slate-500">{item.period}</p>
+                        )}
                       </div>
                     </div>
 

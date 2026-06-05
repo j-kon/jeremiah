@@ -82,9 +82,9 @@ function ExperienceSection() {
                       ))}
                     </div>
 
-                    {item.links && item.links.length > 0 && (
+                    {item.links && item.links.filter(l => l.href && l.href !== '#').length > 0 && (
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {item.links.map((link) => (
+                        {item.links.filter(l => l.href && l.href !== '#').map((link) => (
                           <a
                             key={link.label}
                             href={link.href}

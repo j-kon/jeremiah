@@ -110,7 +110,7 @@ function HeroSection() {
             </h1>
 
             <m.p variants={heroItem} className="mt-6 max-w-full text-base leading-8 text-slate-300 sm:max-w-2xl sm:text-xl">
-              Flutter engineer with 5+ years across architecture, auth, APIs, Firebase-backed systems, and mobile
+              Flutter engineer with 6+ years across architecture, auth, APIs, Firebase-backed systems, and mobile
               delivery. I&apos;m now translating that execution discipline into self-custody wallet work, Lightning-flavored
               product flows, and tools that help builders ship with more clarity.
             </m.p>

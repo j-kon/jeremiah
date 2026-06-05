@@ -797,6 +797,34 @@ export const openSourceProjects = [
     href: '#vision',
     linkLabel: 'See Direction',
   },
+  {
+    title: 'Walletlens',
+    status: 'Personal Project',
+    description:
+      'An open-source tool for exploring and understanding Bitcoin wallet state — designed to make wallet data more legible for developers and technically curious users.',
+    proof: [
+      'Built to close the gap between raw wallet state and user-legible data',
+      'Explores how on-chain information can be surfaced clearly without sacrificing accuracy',
+      'Complements self-custody work by improving transparency into wallet behaviour',
+    ],
+    stack: ['Flutter', 'Dart', 'Bitcoin', 'Wallet Infrastructure'],
+    href: 'https://github.com/jaykon4me/walletlens',
+    linkLabel: 'Open Walletlens',
+  },
+  {
+    title: 'Build Satoshi',
+    status: 'Personal Project',
+    description:
+      'An open-source project exploring how Bitcoin-native tools and product thinking can be applied to real builder workflows — focused on practical freedom-tech development.',
+    proof: [
+      'Combines Bitcoin product thinking with developer tooling direction',
+      'Explores Lightning-flavoured workflows relevant to emerging-market builders',
+      'Part of a broader effort to lower the barrier to building on Bitcoin infrastructure',
+    ],
+    stack: ['Bitcoin', 'Lightning Network', 'Flutter', 'Product Tooling'],
+    href: 'https://github.com/jaykon4me/build-satoshi',
+    linkLabel: 'Open Build Satoshi',
+  },
 ];
 
 export const openSourceTimelineFilters = ['All', 'Code', 'Review', 'Discussion'];

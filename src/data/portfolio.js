@@ -620,82 +620,90 @@ export const experience = [
 ];
 
 export const communityStats = [
-  { value: '20+', label: 'Events organized' },
-  { value: '300+', label: 'Students impacted' },
-  { value: '1', label: 'GDSC lead chapter' },
+  { value: '15+', label: 'Workshops, events & hackathons' },
+  { value: '300+', label: 'Students at Google I/O Extended 2019' },
+  { value: '124', label: 'Attendees at inaugural Google I/O Extended 2018' },
 ];
 
 export const communityCards = [
   {
     title: 'Developer Ecosystem Building',
     description:
-      'As a Google Developer Student Club Lead, I helped grow a developer culture around curiosity, practical learning, and momentum. The goal was not only hosting events, but creating a place where people felt capable of building.',
-    details: ['Led 20+ events across technical learning and community engagement', 'Helped shape a culture that reached 300+ students', 'Focused on consistency, encouragement, and real technical progress'],
+      'As Google Developer Student Club Lead at IBB University Lapai, I built a tech culture from scratch — starting with a single workshop in June 2018 and growing it into an established campus movement with university leadership support.',
+    details: [
+      'Organised Google I/O Extended 2018 (124 attendees) and Google I/O Extended 2019 (300+ attendees)',
+      'Ran 10 workshops, 3 events, and 2 hackathons as DSC Lead — earning Vice-Chancellor recognition',
+      'Built COVID-19 WhatsApp chatbot with a lecturer and API collaborator to make health info accessible to Nigerians on limited data',
+    ],
   },
   {
     title: 'Writing, Education, and Thought Leadership',
     description:
-      'I write and share ideas around Bitcoin, technology, and community because building is only part of the work. Explaining ideas clearly helps adoption, sharpens thinking, and creates trust.',
-    details: ['Publish technical and idea-driven writing on Medium', 'Use writing to explore Bitcoin, product direction, and builder mindset', 'Treat education as part of how freedom technology spreads'],
+      'I write to make Bitcoin, open source, and developer culture more legible — not as commentary, but as documentation of the work. The articles below range from community field notes to engineering reflections on real contributions.',
+    details: [
+      'Published Bitcoin education pieces for developers: transaction structure, mining, UTXO model, and why Bitcoin is not just a currency',
+      'Wrote about getting my first PR merged in bdk-dart — the engineering discipline that matters beyond being technically correct',
+      'Documented the DSC journey across four articles so future community builders have a real reference, not a polished highlight reel',
+    ],
   },
 ];
 
 export const writingPreviews = [
   {
-    title: 'Bitcoin adoption needs practical product thinking, not only ideology.',
-    category: 'Bitcoin / Product',
+    title: 'My first merged Bitcoin open source PR, and what it taught me about engineering.',
+    category: 'Open Source / Engineering',
     summary:
-      'Exploring how real adoption depends on tools, UX, education, and grounded product decisions that respect user constraints.',
-    href: 'https://medium.com/@jaykon',
+      'PR #59 in bdk-dart taught me that useful work is not always the loud kind — and that contributing responsibly means reading norms, studying merged PRs, and exercising restraint over proving you can code.',
+    href: 'https://medium.com/@jaykon/my-first-merged-bitcoin-open-source-pr-and-what-it-taught-me-about-engineering-a743f13528a4',
   },
   {
-    title: 'What building with freedom technology looks like in emerging markets.',
-    category: 'Freedom Tech / Systems',
+    title: 'Bitcoin is not a currency.',
+    category: 'Bitcoin / Philosophy',
     summary:
-      'A lens on resilience, self-custody, and why infrastructure choices matter more when users face harder tradeoffs every day.',
-    href: 'https://medium.com/@jaykon',
+      'Bitcoin was designed as a trust-based network, not a fast payment method. It represents freedom to own and transfer value without centralised control — and that distinction matters for how developers should think about building on it.',
+    href: 'https://medium.com/@jaykon/bitcoin-is-not-a-currency-6414e7b04478',
   },
   {
-    title: 'Developer culture compounds when people feel capable, not intimidated.',
+    title: 'DSC is now a tech culture in my university.',
     category: 'Community / Leadership',
     summary:
-      'Lessons from organizing events and building communities where technical growth becomes social, practical, and repeatable.',
-    href: 'https://medium.com/@jaykon',
+      'From securing a venue to running Google I/O Extended with 300+ students — how a DSC chapter at IBB University Lapai became a real campus institution through partnerships, faculty support, and consistency.',
+    href: 'https://medium.com/@jaykon/dsc-is-now-a-tech-culture-in-my-university-7c3b9ea4366',
   },
 ];
 
 export const writingArchive = [
   {
-    title: 'Why wallet UX has to earn trust before it asks for conviction.',
-    format: 'Bitcoin Product Note',
+    title: 'Understanding Bitcoin as a developer.',
+    format: 'Technical Education',
     summary:
-      'A writing direction around why self-custody products succeed or fail at the level of clarity, recovery, and everyday user confidence.',
-    topics: ['Wallet UX', 'Trust', 'Product Design'],
-    href: 'https://medium.com/@jaykon',
+      'A developer-focused breakdown of Bitcoin fundamentals — wallets, keys, transaction structure (inputs, outputs, fees), mining, and the blockchain explorers worth bookmarking.',
+    topics: ['Bitcoin', 'Transactions', 'UTXO Model'],
+    href: 'https://medium.com/@jaykon/understanding-bitcoin-as-a-developer-8346c2a9661e',
   },
   {
-    title: 'What Root Wallet taught me about state ownership and Bitcoin product boundaries.',
-    format: 'Build Log',
+    title: 'COVID-19 Naija WhatsApp chatbot.',
+    format: 'Build Note',
     summary:
-      'A deeper explanation of why Riverpod orchestration, clean boundaries, and QA discipline matter more once wallet behavior enters the picture.',
-    topics: ['Root Wallet', 'Riverpod', 'Architecture'],
-    href: 'https://medium.com/@jaykon',
+      'A practical response to Nigeria\'s first COVID-19 outbreak — a WhatsApp bot that reached users where they already were, because over 98% of Nigerian mobile users have WhatsApp and affordable data plans to match.',
+    topics: ['Civic Tech', 'Nigeria', 'WhatsApp API'],
+    href: 'https://medium.com/@jaykon/covid-19-naija-whatsapp-chatbot-f09a6994cc81',
   },
   {
-    title: 'Freedom technology in emerging markets needs practical product decisions.',
-    format: 'Systems Essay',
+    title: '2018 — a year of community building.',
+    format: 'Year in Review',
     summary:
-      'A note on resilience, self-custody, and why distribution, UX, and constraints matter just as much as protocol ideals.',
-    topics: ['Freedom Tech', 'Emerging Markets', 'Bitcoin'],
-    href: 'https://medium.com/@jaykon',
+      'From hosting the first Google I/O Extended at IBB University (124 attendees) to attending the DSC Lagos summit — what 2018 taught me about working with people who are ready to be their best, not just already the best.',
+    topics: ['Community', 'Google I/O', 'DSC'],
+    href: 'https://medium.com/@jaykon/2018-70c25af4c61f',
   },
   {
-    title: 'Developer culture compounds when people feel capable enough to keep shipping.',
-    format: 'Community Memo',
+    title: 'About DSC Ibrahim Badamasi Babangida University Lapai.',
+    format: 'Community Field Note',
     summary:
-      'Lessons from GDSC leadership, technical education, and creating environments where momentum feels achievable instead of intimidating.',
-    topics: ['Community', 'Leadership', 'Developer Culture'],
-    href: 'https://medium.com/@jaykon',
+      'The founding story and mission of the DSC chapter at IBBUL — practical skill-building, community-focused solutions, and why portfolio-building through live projects matters more than academic assignments alone.',
+    topics: ['DSC', 'Developer Community', 'Nigeria'],
+    href: 'https://medium.com/@jaykon/about-dsc-ibrahim-badamasi-babangida-university-lapai-d32a9371a60',
   },
 ];
 

@@ -586,8 +586,8 @@ export const experience = [
       'Built and maintained Flutter applications for Android and iOS, implementing real-time messaging, voice and video calls, and secure payment flows. Focused on UI/UX responsiveness, performance optimization, and release management while collaborating closely with backend engineers, designers, and QA in an Agile workflow.',
     themes: ['Real-Time Features', 'Payment Integration', 'Performance', 'Release Management'],
     links: [
-      { label: 'Android', href: '#' },
-      { label: 'iOS', href: '#' },
+      { label: 'Android', href: 'https://play.google.com/store/apps/details?id=tech.apesin.amchat&pcampaignid=web_share' },
+      { label: 'iOS', href: 'https://apps.apple.com/us/app/amchat/id1625943689' },
     ],
   },
   {
@@ -600,8 +600,8 @@ export const experience = [
       'Developed and maintained Laravel backend services, admin dashboards, and REST APIs alongside cross-platform Flutter mobile apps and responsive React frontends. Led and mentored a team of developers, implemented CI/CD pipelines, and collaborated across product, design, and engineering to improve performance, security, and overall platform reliability.',
     themes: ['Flutter', 'Laravel', 'React', 'Team Leadership', 'CI/CD'],
     links: [
-      { label: 'Android', href: '#' },
-      { label: 'iOS', href: '#' },
+      { label: 'Android', href: 'https://play.google.com/store/apps/details?id=com.defixerhub.customer&pcampaignid=web_share' },
+      { label: 'iOS', href: 'https://apps.apple.com/app/defixerhub/id6627338202' },
     ],
   },
   {
@@ -613,8 +613,8 @@ export const experience = [
       'Contributed to app development across UI/UX and core functionality, participated in code reviews, and worked with QA to resolve bugs and performance issues. Collaborated with design teams to maintain consistent, user-friendly interfaces and took part in Agile team meetings throughout.',
     themes: ['UI/UX', 'Code Reviews', 'QA Collaboration', 'Agile'],
     links: [
-      { label: 'Android', href: '#' },
-      { label: 'iOS', href: '#' },
+      { label: 'Android', href: 'https://play.google.com/store/apps/details?id=com.quicktelsolution.quick_manager&pcampaignid=web_share' },
+      { label: 'iOS', href: 'https://apps.apple.com/us/app/timart-business-app/id1553915442' },
     ],
   },
 ];

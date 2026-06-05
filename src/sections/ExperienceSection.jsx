@@ -16,8 +16,8 @@ function ExperienceSection() {
             <SectionHeading
               titleId="experience-heading"
               eyebrow="Experience"
-              title="A mobile product foundation built across multiple teams and delivery environments."
-              description="The common thread across these roles was ownership: taking product intent, integration complexity, and shipping pressure, then turning them into maintainable app behavior."
+              title="From Flutter roots at Timart to full-stack leadership at Defixerhub to shipping comms at Amchat."
+              description="Each role added a layer — UI discipline, backend ownership, team leadership, real-time product complexity — built on the same execution foundation."
             />
           </Reveal>
 

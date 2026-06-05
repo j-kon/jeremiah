@@ -42,7 +42,7 @@ export const pageLinks = [
   { href: '/#contact', label: 'Contact' },
 ];
 
-export const heroBadges = ['Root Wallet', '5+ Years Shipping', '20+ Events Led', 'Bitcoin x Flutter'];
+export const heroBadges = ['Root Wallet', '6+ Years Shipping', '20+ Events Led', 'Bitcoin x Flutter'];
 
 export const featuredStack = [
   'Flutter',
@@ -61,7 +61,7 @@ export const featuredStack = [
 
 export const heroMetrics = [
   {
-    value: '5+',
+    value: '6+',
     label: 'Years in mobile engineering',
   },
   {
@@ -111,7 +111,7 @@ export const signalCards = [
   },
   {
     eyebrow: 'Execution',
-    value: '5+ Years',
+    value: '6+ Years',
     description:
       'Hands-on mobile engineering experience across product delivery, architecture decisions, API integration, and quality-focused implementation.',
   },
@@ -578,36 +578,43 @@ export const projects = [
 
 export const experience = [
   {
+    company: 'Amchat',
+    role: 'Flutter Developer',
+    period: 'April 2025 — Present',
+    impact: 'Delivered real-time communication and payment features in a cross-platform app while keeping performance and release quality high.',
+    summary:
+      'Built and maintained Flutter applications for Android and iOS, implementing real-time messaging, voice and video calls, and secure payment flows. Focused on UI/UX responsiveness, performance optimization, and release management while collaborating closely with backend engineers, designers, and QA in an Agile workflow.',
+    themes: ['Real-Time Features', 'Payment Integration', 'Performance', 'Release Management'],
+    links: [
+      { label: 'Android', href: '#' },
+      { label: 'iOS', href: '#' },
+    ],
+  },
+  {
     company: 'Defixerhub',
-    role: 'Flutter Developer',
-    impact: 'Shipped maintainable mobile product features while helping the app surface stay clean under changing requirements.',
+    role: 'Full Stack Developer',
+    period: 'March 2024 — February 2026',
+    impact: 'Owned the full product surface — mobile, backend, and frontend — while leading a team and shipping a reliable, scalable platform.',
     summary:
-      'Contributed to Flutter product delivery with a focus on clean implementation, maintainable app structure, and turning evolving product requirements into reliable user-facing features.',
-    themes: ['Architecture', 'Product Delivery', 'Cross-Functional Collaboration'],
+      'Developed and maintained Laravel backend services, admin dashboards, and REST APIs alongside cross-platform Flutter mobile apps and responsive React frontends. Led and mentored a team of developers, implemented CI/CD pipelines, and collaborated across product, design, and engineering to improve performance, security, and overall platform reliability.',
+    themes: ['Flutter', 'Laravel', 'React', 'Team Leadership', 'CI/CD'],
+    links: [
+      { label: 'Android', href: '#' },
+      { label: 'iOS', href: '#' },
+    ],
   },
   {
-    company: 'Jetz Technologies',
+    company: 'Timart',
     role: 'Flutter Developer',
-    impact: 'Worked close to API-backed product flows where reliable state and integration quality directly affected delivery confidence.',
+    period: 'September 2020 — February 2024',
+    impact: 'Grew from contributor to a trusted team member by owning quality, collaboration, and a steady stream of user-facing improvements.',
     summary:
-      'Worked on mobile application flows that required strong API integration, thoughtful state management, and steady execution across feature delivery and refinement cycles.',
-    themes: ['API Integration', 'State Management', 'Feature Ownership'],
-  },
-  {
-    company: 'Zooch Solution',
-    role: 'Flutter Developer',
-    impact: 'Built cross-platform experiences with an emphasis on usability, implementation discipline, and shipping quality.',
-    summary:
-      'Helped build cross-platform experiences with attention to usability, implementation quality, and the practical engineering discipline needed to ship and maintain products.',
-    themes: ['Cross-Platform Apps', 'Quality Delivery', 'User Experience'],
-  },
-  {
-    company: 'Quicktel Solution',
-    role: 'Flutter Developer',
-    impact: 'Supported forward-moving releases across backend-connected mobile workflows and practical product iteration.',
-    summary:
-      'Supported product engineering efforts across mobile features, backend-connected workflows, and the iterative work required to keep releases useful, stable, and forward-moving.',
-    themes: ['Mobile Workflows', 'Release Support', 'Execution Discipline'],
+      'Contributed to app development across UI/UX and core functionality, participated in code reviews, and worked with QA to resolve bugs and performance issues. Collaborated with design teams to maintain consistent, user-friendly interfaces and took part in Agile team meetings throughout.',
+    themes: ['UI/UX', 'Code Reviews', 'QA Collaboration', 'Agile'],
+    links: [
+      { label: 'Android', href: '#' },
+      { label: 'iOS', href: '#' },
+    ],
   },
 ];
 
@@ -1001,7 +1008,7 @@ export const contactLanes = [
 ];
 
 export const resumeHighlights = [
-  '5+ years shipping mobile products with Flutter across real product constraints.',
+  '6+ years shipping mobile products with Flutter across real product constraints.',
   'Built Root Wallet, an open-source self-custody Bitcoin wallet for public testnet.',
   'Exploring wallet rails, Lightning product flows, and developer tooling direction.',
   'Led 20+ community events and supported 300+ students through developer ecosystem work.',

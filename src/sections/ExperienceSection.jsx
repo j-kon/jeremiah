@@ -1,4 +1,5 @@
 import { m, useReducedMotion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
 import Container from '../components/Container';
 import Reveal from '../components/Reveal';
 import SectionHeading from '../components/SectionHeading';
@@ -73,6 +74,23 @@ function ExperienceSection() {
                         </span>
                       ))}
                     </div>
+
+                    {item.links && item.links.length > 0 && (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {item.links.map((link) => (
+                          <a
+                            key={link.label}
+                            href={link.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300 transition duration-200 hover:border-amber-300/30 hover:text-amber-200"
+                          >
+                            {link.label}
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </article>
                 </Reveal>
               ))}

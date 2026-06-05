@@ -15,7 +15,7 @@ export const sectionIds = navItems.map(({ id }) => id);
 export const socialLinks = [
   {
     label: 'GitHub',
-    href: 'https://github.com/jaykon',
+    href: 'https://github.com/j-kon',
     icon: 'github',
   },
   {
@@ -117,7 +117,7 @@ export const signalCards = [
   },
   {
     eyebrow: 'Community',
-    value: '20+ Events',
+    value: '15+ Events',
     description:
       'Organized programs and technical events that helped shape developer culture and support 300+ students with practical learning momentum.',
   },
@@ -341,7 +341,7 @@ export const skillGroups = [
     title: 'Backend / APIs',
     icon: 'backend',
     summary: 'Integrating products with services, auth systems, and data layers that support real shipping velocity.',
-    items: ['REST APIs', 'GraphQL', 'Firebase', 'Authentication', 'Cloud Data Flows', 'Service Integration'],
+    items: ['REST APIs', 'Laravel', 'Firebase', 'MySQL', 'Authentication', 'Service Integration'],
   },
   {
     title: 'Developer Tools / Workflow',
@@ -593,7 +593,7 @@ export const experience = [
   {
     company: 'Defixerhub',
     role: 'Full Stack Developer',
-    period: 'March 2024 — February 2026',
+    period: 'March 2024 — Present',
     highlight: 'Team Lead',
     impact: 'Owned the full product surface — mobile, backend, and frontend — while leading a team and shipping a reliable, scalable platform.',
     summary:
@@ -704,6 +704,14 @@ export const writingArchive = [
       'The founding story and mission of the DSC chapter at IBBUL — practical skill-building, community-focused solutions, and why portfolio-building through live projects matters more than academic assignments alone.',
     topics: ['DSC', 'Developer Community', 'Nigeria'],
     href: 'https://medium.com/@jaykon/about-dsc-ibrahim-badamasi-babangida-university-lapai-d32a9371a60',
+  },
+  {
+    title: 'About our recent activity.',
+    format: 'Community Update',
+    summary:
+      'The first DSC IBBUL workshop attracted nearly 40 participants and set the weekly Friday schedule that the chapter built on — a field note on how the early momentum started.',
+    topics: ['DSC', 'Workshop', 'Community Launch'],
+    href: 'https://medium.com/@jaykon/about-our-recent-activity-19894c5ae9c9',
   },
 ];
 
@@ -993,9 +1001,9 @@ export const visionPoints = [
 
 export const nowNext = {
   now: [
-    'Shipping cross-platform mobile product work with an emphasis on architecture, integration quality, and long-term clarity.',
+    'Building real-time messaging, voice/video, and payment features at Amchat — Flutter on Android and iOS, in production.',
     'Studying wallet mechanics, self-custody flows, and Bitcoin-native product decisions with more technical depth.',
-    'Writing and speaking about Bitcoin, technology, and the kind of developer culture that helps people keep building.',
+    'Writing about Bitcoin, open source, and the kind of developer culture that helps people keep building.',
   ],
   next: [
     'Deeper contribution to Bitcoin open source and wallet infrastructure.',
@@ -1019,8 +1027,8 @@ export const contactMethods = [
   },
   {
     label: 'GitHub',
-    value: 'github.com/jaykon',
-    href: 'https://github.com/jaykon',
+    value: 'github.com/j-kon',
+    href: 'https://github.com/j-kon',
     icon: 'github',
   },
   {
